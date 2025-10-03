@@ -3,556 +3,919 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexAlignement - Coaching Systémique | Geoffroy Bertrand</title>
-    <meta name="description" content="Accompagnement systémique pour conflits, couples, familles et entreprises. Première séance 70€/h.">
-    
+    <title>Flex Alignement Thérapie - Coaching Systémique | Geoffroy Bertrand</title>
+    <meta name="description" content="Thérapie systémique brève pour anxiété, conflits relationnels, couples, TOC, burnout. Approche moderne basée sur les neurosciences.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
-    <!-- Calendly -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(165deg, 
-                #0a4958 0%, 
-                #073540 30%,
-                #04252e 60%,
-                #021a20 100%);
-            color: rgba(255,255,255,0.9);
-            line-height: 1.7;
-            min-height: 100vh;
-        }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        /* Effet holographique subtil */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(255,107,53,0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(253,200,48,0.05) 0%, transparent 50%);
-            pointer-events: none;
-            animation: shimmer 8s ease-in-out infinite;
-        }
-        
-        @keyframes shimmer {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 0.8; }
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 800px;
-        }
-        
-        /* Logo */
-        .logo-container {
-            margin-bottom: 50px;
-            animation: fadeInDown 1s ease-out;
-        }
-        
-        .logo-container img {
-            width: 200px;
-            height: 200px;
-            filter: drop-shadow(0 0 40px rgba(255,107,53,0.4));
-        }
-        
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Titre principal */
-        .hero h1 {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(32px, 5vw, 56px);
-            font-weight: 600;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
-            background: linear-gradient(120deg, #FF6B35, #FDC830, #FF8C42, #FFB84D);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-        
-        .hero h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(20px, 3vw, 28px);
-            font-weight: 400;
-            font-style: italic;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 40px;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Spécialités */
-        .specialites {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 50px 0;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-        
-        .specialite-card {
-            background: rgba(255,255,255,0.05);
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,107,53,0.2);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .specialite-card:hover {
-            background: rgba(255,255,255,0.08);
-            border-color: rgba(255,107,53,0.4);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255,107,53,0.2);
-        }
-        
-        .specialite-card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 16px;
-            color: #FF6B35;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-        
-        .specialite-card p {
-            font-size: 15px;
-            color: rgba(255,255,255,0.75);
-            line-height: 1.6;
-        }
-        
-        /* CTA Buttons */
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 50px;
-            animation: fadeInUp 1s ease-out 0.8s both;
-        }
-        
-        .btn {
-            font-family: 'Cinzel', serif;
-            font-size: 16px;
-            font-weight: 500;
-            padding: 18px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            letter-spacing: 1px;
-            cursor: pointer;
-            border: none;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #FF6B35, #FDC830);
-            color: #021a20;
-            box-shadow: 0 10px 30px rgba(255,107,53,0.3);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,107,53,0.5);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: #FF6B35;
-            border: 2px solid #FF6B35;
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(255,107,53,0.1);
-            transform: translateY(-3px);
-        }
-        
-        /* Scroll indicator */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-            opacity: 0.6;
-        }
-        
-        .scroll-indicator::before {
-            content: '↓';
-            font-size: 32px;
-            color: #FF6B35;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-10px); }
-            60% { transform: translateX(-50%) translateY(-5px); }
-        }
-        
-        /* Sections */
-        section {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        section h2 {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(28px, 4vw, 42px);
-            text-align: center;
-            margin-bottom: 20px;
-            color: #FF6B35;
-            letter-spacing: 2px;
-        }
-        
-        section h3 {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(20px, 3vw, 28px);
-            margin: 40px 0 20px;
-            color: #FDC830;
-            letter-spacing: 1.5px;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            font-size: 20px;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 60px;
-            font-style: italic;
-        }
-        
-        /* Approche systémique */
-        .approche-content {
-            background: rgba(255,255,255,0.03);
-            padding: 50px;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        .approche-content p {
-            font-size: 18px;
-            line-height: 2;
-            margin-bottom: 25px;
-            color: rgba(255,255,255,0.85);
-        }
-        
-        .approche-content ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .approche-content li {
-            font-size: 17px;
-            line-height: 2;
-            margin-bottom: 15px;
-            padding-left: 30px;
-            position: relative;
-            color: rgba(255,255,255,0.8);
-        }
-        
-        .approche-content li::before {
-            content: '◆';
-            position: absolute;
-            left: 0;
-            color: #FF6B35;
-            font-size: 14px;
-        }
-        
-        .highlight-box {
-            background: rgba(255,107,53,0.1);
-            border-left: 4px solid #FF6B35;
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 10px;
-        }
-        
-        .highlight-box p {
-            font-size: 20px;
-            font-style: italic;
-            color: rgba(255,255,255,0.9);
-            margin: 0;
-        }
-        
-        /* Calendly Section */
-        #calendly {
-            background: rgba(255,255,255,0.03);
-            border-radius: 20px;
-            padding: 60px 40px;
-        }
-        
-        .calendly-inline-widget {
-            min-width: 320px;
-            height: 700px;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            background: rgba(0,0,0,0.3);
-            border-top: 1px solid rgba(255,107,53,0.2);
-        }
-        
-        footer p {
-            font-size: 16px;
-            color: rgba(255,255,255,0.6);
-            margin-bottom: 20px;
-        }
-        
-        .contact-info {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        
-        .contact-item {
-            font-size: 16px;
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .contact-item:hover {
-            color: #FF6B35;
-        }
-        
-        .citation-footer {
-            font-family: 'Playfair Display', serif;
-            font-size: 14px;
-            font-style: italic;
-            color: rgba(255,255,255,0.4);
-            margin-top: 30px;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 40px 20px;
-            }
-            
-            .logo-container img {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .specialites {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .approche-content {
-                padding: 30px 20px;
-            }
-            
-            section {
-                padding: 60px 20px;
-            }
-            
-            .calendly-inline-widget {
-                height: 600px;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header with Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <img src="images/Logo_Coach.gif" alt="Flex Alignement" class="nav-logo">
+                <div class="nav-text">
+                    <span class="brand-name">Flex Alignement</span>
+                    <span class="brand-subtitle">thérapie</span>
+                </div>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <!-- Dropdown for Services -->
+                <div class="nav-dropdown">
+                    <button class="nav-link dropdown-toggle">
+                        Ce que je traite <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#conflits" class="dropdown-item">Conflits & Relations</a>
+                        <a href="#couples" class="dropdown-item">Couples</a>
+                        <a href="#lgbtqi" class="dropdown-item">LGBTQI+</a>
+                        <a href="#toc" class="dropdown-item">TOC</a>
+                        <a href="#burnout" class="dropdown-item">Burnout</a>
+                        <a href="#adolescents" class="dropdown-item">Adolescents</a>
+                    </div>
+                </div>
+
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#approche" class="nav-link">Mon approche</a>
+                <a href="#tarifs" class="nav-link">Tarifs</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="https://calendly.com/geoffbertrand/30min" class="nav-cta" target="_blank">Prendre RDV</a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="logo-container">
-                <img src="Logo_Coach.gif" alt="FlexAlignement - Logo animé">
-            </div>
-            
-            <h1>FLEXALIGNEMENT</h1>
-            <h2>Coaching Systémique · Neurosciences · IA</h2>
-            
-            <div class="specialites">
-                <div class="specialite-card">
-                    <h3>CONFLITS & RELATIONS</h3>
-                    <p>Dénouer les tensions et restaurer la communication</p>
+    <section id="accueil" class="hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Thérapie pour l'esprit moderne
+                    </h1>
+                    <p class="hero-subtitle">
+                        Trouvez votre alignement intérieur grâce à l'approche systémique
+                    </p>
+                    <p class="hero-description">
+                        Je vous accompagne pour transformer vos difficultés en opportunités de croissance.
+                        Ensemble, nous travaillons à créer des changements durables dans votre vie.
+                    </p>
                 </div>
-                <div class="specialite-card">
-                    <h3>COUPLES & FAMILLES</h3>
-                    <p>Retrouver l'harmonie et l'équilibre familial</p>
-                </div>
-                <div class="specialite-card">
-                    <h3>ENTREPRISES & ÉQUIPES</h3>
-                    <p>Optimiser la collaboration et la performance</p>
-                </div>
-                <div class="specialite-card">
-                    <h3>TOC · TOP · LGBTQI+</h3>
-                    <p>Accompagnement spécialisé et bienveillant</p>
-                </div>
-            </div>
-            
-            <div class="cta-buttons">
-                <a href="#calendly" class="btn btn-primary">Prendre rendez-vous</a>
-                <a href="#approche" class="btn btn-secondary">Découvrir l'approche</a>
             </div>
         </div>
-        
-        <div class="scroll-indicator"></div>
     </section>
-    
-    <!-- Approche Systémique -->
-    <section id="approche">
-        <h2>L'APPROCHE SYSTÉMIQUE</h2>
-        <p class="section-subtitle">Une méthode éprouvée pour des changements durables</p>
-        
-        <div class="approche-content">
-            <p>
-                L'approche systémique considère que vous évoluez dans un ensemble de relations et d'interactions. 
-                Plutôt que de chercher des causes linéaires, nous explorons les dynamiques circulaires qui 
-                maintiennent les situations problématiques.
-            </p>
-            
-            <div class="highlight-box">
-                <p>"Il faut d'abord tordre ce qui est à aligner"</p>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2 class="section-title centered">Bienvenue chez Flex Alignement</h2>
+                <p class="intro-text">
+                    Vous êtes peut-être ici parce que vous ressentez le poids de l'anxiété, des conflits relationnels
+                    ou d'un mal-être qui persiste. Je comprends. Mon approche combine la thérapie systémique brève
+                    avec les dernières avancées en neurosciences pour vous offrir un accompagnement moderne et efficace.
+                </p>
+                <div class="intro-features">
+                    <div class="feature-item">
+                        <i class="fas fa-brain"></i>
+                        <h3>Approche Neuroscientifique</h3>
+                        <p>Basée sur la compréhension du cerveau et de ses mécanismes</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Thérapie Brève</h3>
+                        <p>Des résultats concrets en 6 à 12 séances en moyenne</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>Espace Bienveillant</h3>
+                        <p>Un accompagnement sans jugement, adapté à votre rythme</p>
+                    </div>
+                </div>
             </div>
-            
-            <h3>Ce qui rend cette approche unique</h3>
-            
-            <ul>
-                <li><strong>Vision globale :</strong> Nous analysons l'ensemble du système (famille, couple, équipe) plutôt que l'individu isolé</li>
-                <li><strong>Patterns répétitifs :</strong> Identification des schémas qui se répètent et maintiennent le problème</li>
-                <li><strong>Solutions pragmatiques :</strong> Interventions concrètes et orientées vers le changement</li>
-                <li><strong>Effet de levier :</strong> Petites modifications stratégiques pour grands impacts</li>
-            </ul>
-            
-            <h3>Enrichie par les neurosciences et l'IA</h3>
-            
-            <p>
-                Mon approche intègre les dernières découvertes en neurosciences pour comprendre comment 
-                le cerveau crée et maintient les habitudes, ainsi que des outils d'intelligence artificielle 
-                pour analyser les dynamiques complexes et identifier les points d'intervention les plus efficaces.
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title centered">Ce que je traite</h2>
+            <p class="section-subtitle">
+                Chaque parcours thérapeutique est unique. Voici les principales problématiques
+                que j'accompagne avec une approche personnalisée.
             </p>
-            
-            <ul>
-                <li><strong>Neurosciences :</strong> Compréhension des mécanismes de changement comportemental</li>
-                <li><strong>Intelligence Artificielle :</strong> Modélisation des systèmes complexes et aide à la décision</li>
-                <li><strong>Données probantes :</strong> Approche validée scientifiquement</li>
-            </ul>
-            
-            <h3>Pour qui ?</h3>
-            
-            <p>
-                Cette approche est particulièrement efficace pour les personnes qui :
+
+            <div class="services-grid">
+                <!-- Conflits & Relations -->
+                <div class="service-card" id="conflits">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Conflits & Relations</h3>
+                    <p>
+                        Les conflits répétitifs épuisent. J'utilise l'approche systémique pour identifier
+                        les patterns relationnels toxiques et vous aider à créer des dynamiques plus saines.
+                    </p>
+                    <ul class="service-list">
+                        <li>Conflits familiaux</li>
+                        <li>Difficultés au travail</li>
+                        <li>Relations toxiques</li>
+                        <li>Communication inefficace</li>
+                    </ul>
+                    <a href="#contact" class="service-link">En savoir plus →</a>
+                </div>
+
+                <!-- Couples -->
+                <div class="service-card" id="couples">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Thérapie de Couple</h3>
+                    <p>
+                        Retrouvez la complicité et l'harmonie dans votre couple. Nous travaillons ensemble
+                        pour dépasser les crises et renforcer votre lien.
+                    </p>
+                    <ul class="service-list">
+                        <li>Crises et conflits</li>
+                        <li>Problèmes de communication</li>
+                        <li>Infidélité et reconstruction</li>
+                        <li>Préparation au mariage</li>
+                    </ul>
+                    <a href="#contact" class="service-link">En savoir plus →</a>
+                </div>
+
+                <!-- LGBTQI+ -->
+                <div class="service-card" id="lgbtqi">
+                    <div class="service-icon">
+                        <i class="fas fa-rainbow"></i>
+                    </div>
+                    <h3>LGBTQI+ Affirmatif</h3>
+                    <p>
+                        Un espace sûr et inclusif pour explorer votre identité, vos relations et votre
+                        bien-être sans crainte de jugement.
+                    </p>
+                    <ul class="service-list">
+                        <li>Coming out et acceptation</li>
+                        <li>Questions d'identité</li>
+                        <li>Relations et familles</li>
+                        <li>Discrimination et stress minoritaire</li>
+                    </ul>
+                    <a href="#contact" class="service-link">En savoir plus →</a>
+                </div>
+
+                <!-- TOC -->
+                <div class="service-card" id="toc">
+                    <div class="service-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>TOC & TOP</h3>
+                    <p>
+                        Spécialisé dans le traitement des troubles obsessionnels compulsifs avec une
+                        approche systémique stratégique éprouvée.
+                    </p>
+                    <ul class="service-list">
+                        <li>Obsessions et compulsions</li>
+                        <li>Rituels envahissants</li>
+                        <li>Perfectionnisme pathologique</li>
+                        <li>Anxiété de vérification</li>
+                    </ul>
+                    <a href="#contact" class="service-link">En savoir plus →</a>
+                </div>
+
+                <!-- Burnout -->
+                <div class="service-card" id="burnout">
+                    <div class="service-icon">
+                        <i class="fas fa-battery-quarter"></i>
+                    </div>
+                    <h3>Burnout</h3>
+                    <p>
+                        Retrouvez votre énergie et votre équilibre. J'accompagne votre reconstruction
+                        après l'épuisement professionnel.
+                    </p>
+                    <ul class="service-list">
+                        <li>Épuisement émotionnel</li>
+                        <li>Stress chronique</li>
+                        <li>Perte de sens au travail</li>
+                        <li>Prévention de la rechute</li>
+                    </ul>
+                    <a href="#contact" class="service-link">En savoir plus →</a>
+                </div>
+
+                <!-- Adolescents -->
+                <div class="service-card" id="adolescents">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Adolescents</h3>
+                    <p>
+                        Un accompagnement adapté aux défis uniques de l'adolescence, dans le respect
+                        de leur autonomie grandissante.
+                    </p>
+                    <ul class="service-list">
+                        <li>Anxiété et stress scolaire</li>
+                        <li>Difficultés relationnelles</li>
+                        <li>Estime de soi</li>
+                        <li>Orientation et choix de vie</li>
+                    </ul>
+                    <a href="#contact" class="service-link">En savoir plus →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/geoffroy-placeholder.jpg" alt="Geoffroy Bertrand">
+                    <div class="about-decoration"></div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">À propos de moi</h2>
+                    <h3 class="about-subtitle">Geoffroy Bertrand, Coach Systémique</h3>
+                    <p>
+                        Passionné par la complexité de l'esprit humain et les dynamiques relationnelles,
+                        j'ai choisi de me spécialiser dans l'approche systémique brève après avoir
+                        constaté son efficacité remarquable.
+                    </p>
+                    <p>
+                        Formé à l'école LACT (L'Approche Centrée sur les Thérapies brèves), je m'inscris
+                        dans la lignée de l'École de Palo Alto. Ma pratique intègre également les
+                        neurosciences cognitives et le biofeedback pour une approche holistique du changement.
+                    </p>
+                    <div class="about-credentials">
+                        <div class="credential-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Diplômé LACT - Thérapie Systémique Brève</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Formation en Neurosciences Appliquées</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-heart-pulse"></i>
+                            <span>Praticien Biofeedback / Neurofeedback</span>
+                        </div>
+                    </div>
+                    <blockquote class="about-quote">
+                        "Je crois profondément que chacun possède les ressources nécessaires pour
+                        surmonter ses difficultés. Mon rôle est de vous aider à les mobiliser."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approche" class="approach-section">
+        <div class="container">
+            <h2 class="section-title centered">Mon Approche Thérapeutique</h2>
+            <p class="section-subtitle">
+                Une méthode intégrative qui combine le meilleur de la thérapie systémique,
+                des neurosciences et des technologies modernes.
             </p>
-            
-            <ul>
-                <li>Vivent des conflits récurrents dans leurs relations</li>
-                <li>Souhaitent améliorer la dynamique de leur couple ou famille</li>
-                <li>Cherchent à optimiser la collaboration au sein de leur équipe</li>
-                <li>Font face à des troubles obsessionnels compulsifs (TOC)</li>
-                <li>Vivent un trouble de la personnalité obsessionnelle (TOP)</li>
-                <li>Ont besoin d'un accompagnement bienveillant LGBTQI+ friendly</li>
-            </ul>
-            
-            <div class="highlight-box">
+
+            <div class="approach-pillars">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Approche Systémique</h3>
+                    <p>
+                        Issue de l'École de Palo Alto, cette approche considère que les problèmes
+                        naissent et se maintiennent dans les interactions. En modifiant ces patterns,
+                        nous créons des changements durables.
+                    </p>
+                    <div class="pillar-benefits">
+                        <h4>Bénéfices :</h4>
+                        <ul>
+                            <li>Vision globale des problématiques</li>
+                            <li>Solutions concrètes et rapides</li>
+                            <li>Changements qui perdurent</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Neurosciences</h3>
+                    <p>
+                        Les découvertes récentes sur le cerveau nous permettent de comprendre comment
+                        se forment les habitudes et les émotions. Cette connaissance guide nos interventions
+                        pour un changement efficace.
+                    </p>
+                    <div class="pillar-benefits">
+                        <h4>Applications :</h4>
+                        <ul>
+                            <li>Reprogrammation des circuits neuronaux</li>
+                            <li>Gestion du stress et de l'anxiété</li>
+                            <li>Optimisation des capacités cognitives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3>Biofeedback</h3>
+                    <p>
+                        Ces technologies permettent de visualiser en temps réel l'activité de votre
+                        système nerveux. Vous apprenez ainsi à mieux réguler vos états internes
+                        pour un bien-être durable.
+                    </p>
+                    <div class="pillar-benefits">
+                        <h4>Techniques utilisées :</h4>
+                        <ul>
+                            <li>Cohérence cardiaque</li>
+                            <li>Neurofeedback EEG</li>
+                            <li>Régulation du système nerveux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="approach-process">
+                <h3 class="process-title">Notre Parcours Ensemble</h3>
+                <div class="process-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h4>Première Rencontre</h4>
+                            <p>Nous explorons ensemble votre situation et définissons vos objectifs de changement.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h4>Analyse Systémique</h4>
+                            <p>J'identifie les patterns qui maintiennent vos difficultés et les leviers de changement.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h4>Interventions Stratégiques</h4>
+                            <p>Nous mettons en place des actions concrètes pour créer les changements désirés.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h4>Consolidation</h4>
+                            <p>Nous ancrons les nouveaux patterns pour des résultats qui perdurent dans le temps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title centered">Ils ont transformé leur vie</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Après des années de thérapie traditionnelle, j'ai enfin trouvé une approche
+                        qui fonctionne. En 8 séances, j'ai plus progressé qu'en 3 ans ailleurs."
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Sophie L.</span>
+                        <span class="author-info">Traitement TOC</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Geoffroy m'a aidé à comprendre les dynamiques toxiques dans mes relations.
+                        Aujourd'hui, je sais poser mes limites et mes relations sont bien plus saines."
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Marc D.</span>
+                        <span class="author-info">Conflits relationnels</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Notre couple était au bord de la rupture. L'approche systémique nous a
+                        permis de retrouver notre complicité et de construire une relation plus forte."
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Julie & Thomas</span>
+                        <span class="author-info">Thérapie de couple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="tarifs" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title centered">Tarifs et Modalités</h2>
+            <p class="section-subtitle">
+                Un investissement dans votre bien-être, avec des tarifs transparents et accessibles.
+            </p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Consultation Découverte</h3>
+                        <div class="price">
+                            <span class="amount">Gratuit</span>
+                            <span class="duration">30 minutes</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Première rencontre sans engagement</li>
+                            <li><i class="fas fa-check"></i> Évaluation de vos besoins</li>
+                            <li><i class="fas fa-check"></i> Présentation de mon approche</li>
+                            <li><i class="fas fa-check"></i> Réponses à vos questions</li>
+                        </ul>
+                    </div>
+                    <a href="https://calendly.com/geoffbertrand/seance-decouverte" class="btn btn-outline" target="_blank">
+                        Réserver
+                    </a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Plus populaire</div>
+                    <div class="pricing-header">
+                        <h3>Séance Individuelle</h3>
+                        <div class="price">
+                            <span class="amount">70€</span>
+                            <span class="duration">60 minutes</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Séance complète d'une heure</li>
+                            <li><i class="fas fa-check"></i> Suivi personnalisé</li>
+                            <li><i class="fas fa-check"></i> Exercices entre les séances</li>
+                            <li><i class="fas fa-check"></i> Support par email</li>
+                            <li><i class="fas fa-check"></i> En ligne ou en présentiel</li>
+                        </ul>
+                    </div>
+                    <a href="https://calendly.com/geoffbertrand/seance-individuelle" class="btn btn-primary" target="_blank">
+                        Réserver
+                    </a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Forfait 6 Séances</h3>
+                        <div class="price">
+                            <span class="amount">390€</span>
+                            <span class="duration">6 x 60 minutes</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Économie de 30€</li>
+                            <li><i class="fas fa-check"></i> Engagement thérapeutique</li>
+                            <li><i class="fas fa-check"></i> Planification flexible</li>
+                            <li><i class="fas fa-check"></i> Suivi approfondi</li>
+                            <li><i class="fas fa-check"></i> Paiement en 2 fois possible</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-outline">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+
+            <div class="pricing-info">
+                <p><i class="fas fa-info-circle"></i> Moyens de paiement acceptés : CB, espèces, virement</p>
+                <p><i class="fas fa-calendar-xmark"></i> Annulation gratuite jusqu'à 24h avant la séance</p>
+                <p><i class="fas fa-shield-halved"></i> Certaines mutuelles remboursent les séances de coaching</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2 class="section-title centered">Blog & Ressources</h2>
+            <p class="section-subtitle">
+                Des articles et réflexions pour nourrir votre cheminement personnel
+            </p>
+
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-1-placeholder.jpg" alt="Article blog">
+                        <span class="blog-category">Anxiété</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>5 techniques pour calmer une crise d'anxiété</h3>
+                        <p>
+                            Découvrez des méthodes concrètes basées sur les neurosciences pour
+                            retrouver rapidement votre calme en situation de stress...
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-date">15 octobre 2024</span>
+                            <a href="#" class="blog-link">Lire la suite →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-2-placeholder.jpg" alt="Article blog">
+                        <span class="blog-category">Relations</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Les patterns toxiques dans les relations</h3>
+                        <p>
+                            Comment identifier et briser les schémas relationnels qui vous font
+                            souffrir ? Une approche systémique pour des relations saines...
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-date">8 octobre 2024</span>
+                            <a href="#" class="blog-link">Lire la suite →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-3-placeholder.jpg" alt="Article blog">
+                        <span class="blog-category">TOC</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Comprendre les TOC : au-delà des symptômes</h3>
+                        <p>
+                            Une vision systémique des troubles obsessionnels compulsifs qui
+                            ouvre de nouvelles perspectives thérapeutiques...
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-date">1 octobre 2024</span>
+                            <a href="#" class="blog-link">Lire la suite →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog-cta">
+                <a href="/blog" class="btn btn-secondary">Voir tous les articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title centered">Questions Fréquentes</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quelle est la différence avec une thérapie classique ?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            L'approche systémique brève se concentre sur le présent et les solutions
+                            plutôt que sur l'exploration du passé. Nous travaillons sur les patterns
+                            actuels qui maintiennent vos difficultés, permettant des changements
+                            rapides et durables en quelques séances.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Combien de séances sont nécessaires ?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            En moyenne, 6 à 12 séances suffisent pour observer des changements
+                            significatifs. Certains problèmes peuvent être résolus en moins de
+                            séances, d'autres peuvent nécessiter un suivi plus long. Chaque
+                            parcours est unique.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Les séances en ligne sont-elles aussi efficaces ?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Absolument. Les recherches montrent que la thérapie en ligne peut être
+                            tout aussi efficace qu'en présentiel. J'utilise une plateforme sécurisée
+                            et l'approche reste la même. Cela offre plus de flexibilité et de confort.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Comment savoir si cette approche me convient ?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            C'est exactement pour cela que je propose une consultation découverte
+                            gratuite. Nous pourrons discuter de vos besoins, de mes méthodes et
+                            voir si nous sommes un bon match thérapeutique. Il n'y a aucun engagement.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quelle est votre politique d'annulation ?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Les séances peuvent être annulées ou reportées gratuitement jusqu'à
+                            24 heures avant. Au-delà, la séance est due. Cette politique permet
+                            de maintenir une disponibilité équitable pour tous les clients.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Proposez-vous des tarifs adaptés ?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Je crois que la thérapie doit être accessible. Pour les étudiants,
+                            chômeurs ou personnes en difficulté financière, des tarifs adaptés
+                            peuvent être discutés. N'hésitez pas à m'en parler.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title centered">Prendre Contact</h2>
+            <p class="section-subtitle">
+                Prêt à commencer votre parcours vers le changement ?
+                Plusieurs options s'offrent à vous.
+            </p>
+
+            <div class="contact-options">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Réserver en ligne</h3>
+                    <p>Le plus rapide : choisissez directement votre créneau</p>
+                    <a href="https://calendly.com/geoffbertrand/30min" class="btn btn-primary" target="_blank">
+                        Voir les disponibilités
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Par téléphone</h3>
+                    <p>Pour un premier contact plus personnel</p>
+                    <a href="tel:+33664917389" class="contact-link">
+                        <i class="fas fa-phone"></i> +33 6 64 91 73 89
+                    </a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Par email</h3>
+                    <p>Pour poser vos questions en détail</p>
+                    <a href="mailto:contact@flexalignement.com" class="contact-link">
+                        <i class="fas fa-envelope"></i> contact@flexalignement.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form-section">
+                <h3>Ou envoyez-moi un message</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Choisir...</option>
+                                <option value="info">Demande d'information</option>
+                                <option value="rdv">Prise de rendez-vous</option>
+                                <option value="couple">Thérapie de couple</option>
+                                <option value="toc">Question sur les TOC</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Votre message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-info-bottom">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Cabinet</h4>
+                        <p>Consultations en ligne<br>et en présentiel sur RDV</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Horaires</h4>
+                        <p>Lundi - Vendredi : 9h - 19h<br>Samedi : 9h - 13h</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h4>Langues</h4>
+                        <p>Français<br>English</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à transformer votre vie ?</h2>
                 <p>
-                    Première séance : 70€/h · Durée moyenne d'un accompagnement : 6 à 12 séances
+                    Le changement commence par un premier pas. Réservez votre consultation
+                    découverte gratuite et explorons ensemble comment je peux vous aider.
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://calendly.com/geoffbertrand/seance-decouverte" class="btn btn-primary btn-large" target="_blank">
+                        Consultation gratuite (30 min)
+                    </a>
+                    <a href="#tarifs" class="btn btn-secondary btn-large">
+                        Voir les tarifs
+                    </a>
+                </div>
+                <p class="cta-note">
+                    <i class="fas fa-lock"></i> Consultation confidentielle et sans engagement
                 </p>
             </div>
         </div>
     </section>
-    
-    <!-- Calendly -->
-    <section id="calendly">
-        <h2>PRENEZ RENDEZ-VOUS</h2>
-        <p class="section-subtitle">Première séance · 70€/h · Disponible en ligne ou en présentiel</p>
-        
-        <!-- 
-            IMPORTANT : Remplacez l'URL ci-dessous par votre propre lien Calendly
-            Format : https://calendly.com/votre-nom/seance-coaching
-        -->
-        <div class="calendly-inline-widget" 
-             data-url="https://calendly.com/votre-lien-calendly?hide_gdpr_banner=1&background_color=021a20&text_color=ffffff&primary_color=ff6b35"
-             style="min-width:320px;height:700px;">
-        </div>
-    </section>
-    
+
     <!-- Footer -->
-    <footer>
-        <p><strong>Geoffroy Bertrand</strong> · Coach Systémique</p>
-        
-        <div class="contact-info">
-            <a href="tel:+33664917389" class="contact-item">+33 6 64 91 73 89</a>
-            <a href="mailto:contact@flexalignement.com" class="contact-item">contact@flexalignement.com</a>
-            <a href="https://flexalignement.com" class="contact-item" target="_blank">flexalignement.com</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="images/Logo.png" alt="Flex Alignement" class="footer-logo">
+                        <p class="footer-tagline">"Il faut d'abord tordre ce qui est à aligner"</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#approche">Mon approche</a></li>
+                        <li><a href="#tarifs">Tarifs</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#conflits">Conflits & Relations</a></li>
+                        <li><a href="#couples">Thérapie de couple</a></li>
+                        <li><a href="#lgbtqi">LGBTQI+</a></li>
+                        <li><a href="#toc">TOC & TOP</a></li>
+                        <li><a href="#burnout">Burnout</a></li>
+                        <li><a href="#adolescents">Adolescents</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+33664917389">+33 6 64 91 73 89</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@flexalignement.com">contact@flexalignement.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-calendar"></i>
+                            <a href="https://calendly.com/geoffbertrand" target="_blank">Prendre RDV en ligne</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 Flex Alignement Thérapie - Tous droits réservés</p>
+                    <div class="legal-links">
+                        <a href="/mentions-legales">Mentions légales</a>
+                        <a href="/confidentialite">Politique de confidentialité</a>
+                        <a href="/cgv">CGV</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <p class="citation-footer">
-            "Il faut d'abord tordre ce qui est à aligner"
-        </p>
-        
-        <p style="margin-top: 40px; font-size: 14px;">
-            © 2025 FlexAlignement · Tous droits réservés
-        </p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>
