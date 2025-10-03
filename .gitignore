@@ -1,0 +1,79 @@
+# Ignore
+storage/
+
+# Environnement et configuration
+.env
+.env.*
+!.env.example
+*.log
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Clés et fichiers sensibles
+*.pem
+*.key
+id_*
+*.pub
+.ssh/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib
+/lib64
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+
+# Node.js / React
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.npm/
+.yarn/
+.pnp.*
+.eslintcache
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker / Ollama
+ollama/*
+!ollama/.gitkeep
+
+# ChromaDB
+chroma_db/
+
+# Divers
+.DS_Store
+Thumbs.db
+
+# Vosk Speech Recognition Models
+frontend/public/models/*.zip
+frontend/public/models/vosk-model-*
