@@ -1050,6 +1050,24 @@ section {
     color: var(--primary);
 }
 
+/* Boutons dans les cartes de prix */
+.pricing-card .btn {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+}
+
+.pricing-card .btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+}
+
+.pricing-card .btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
 .pricing-info {
     text-align: center;
     margin-top: 40px;
