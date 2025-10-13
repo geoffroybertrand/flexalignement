@@ -906,41 +906,49 @@ section {
 .testimonials-section {
     background: var(--background-light);
     padding: 80px 0;
+    overflow: hidden;
 }
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.testimonial-card {
-    background: white;
-    padding: 40px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 5px 20px var(--shadow-light);
+.testimonials-carousel {
+    max-width: 100%;
+    margin: 60px auto 0;
+    overflow: hidden;
     position: relative;
 }
 
-.testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    font-size: 4rem;
-    color: rgba(244, 164, 96, 0.2);
-    font-family: 'Playfair Display', serif;
+.testimonials-track {
+    display: flex;
+    animation: scroll 96s linear infinite; /* 8 secondes x 12 cartes */
 }
 
-.stars {
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonial-card {
+    flex: 0 0 400px;
+    background: white;
+    padding: 40px;
+    margin: 0 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px var(--shadow-light);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px var(--shadow-medium);
+}
+
+.testimonial-icon {
+    font-size: 1.2rem;
     margin-bottom: 20px;
-}
-
-.stars i {
-    color: #FFD700;
-    font-size: 1rem;
-    margin-right: 2px;
 }
 
 .testimonial-text {
@@ -948,21 +956,36 @@ section {
     font-style: italic;
     color: var(--text-secondary);
     line-height: 1.8;
+    font-size: 1rem;
 }
 
 .testimonial-author {
-    display: flex;
-    flex-direction: column;
-}
-
-.author-name {
     font-weight: 600;
     color: var(--text-primary);
+    font-size: 0.95rem;
 }
 
-.author-info {
-    font-size: 0.9rem;
+.testimonial-tag {
+    font-weight: 400;
     color: var(--primary);
+}
+
+/* Pause on hover */
+.testimonials-carousel:hover .testimonials-track {
+    animation-play-state: paused;
+}
+
+/* Mobile adjustments for testimonials */
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex: 0 0 300px;
+        padding: 30px;
+        margin: 0 10px;
+    }
+
+    .testimonials-track {
+        animation-duration: 72s; /* Ajuster pour mobile */
+    }
 }
 
 /* Pricing Section */
