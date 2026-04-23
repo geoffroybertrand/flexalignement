@@ -72,6 +72,13 @@
   --dur-fast: 180ms;
   --dur: 280ms;
   --dur-slow: 520ms;
+
+  /* --- Logo tint --- */
+  /* Recolore un logo en `--c-signal` (#3D6B52) sans toucher au fichier source.
+     brightness(0) neutralise les couleurs d'origine ; la suite teinte.
+     Si l'on change `--c-signal`, regénérer cette chaîne via
+     https://codepen.io/sosuke/pen/Pjoqqp */
+  --logo-tint: brightness(0) saturate(100%) invert(34%) sepia(44%) saturate(560%) hue-rotate(103deg) brightness(92%) contrast(88%);
 }
 
 /* ============================================================
@@ -362,30 +369,39 @@ em, i { font-style: normal; font-weight: 500; }
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: var(--sp-3);
+  gap: 10px;
   color: var(--c-ink);
 }
 .nav-brand__logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  /* 28 px = cap-height approx. du wordmark (Geist 1.25rem @ 600) × 1.4 ;
+     équilibre optique entre le logo et le texte. */
+  width: 28px;
+  height: 28px;
   flex: 0 0 auto;
   overflow: hidden;
-  border-radius: 2px;
 }
 .nav-brand__logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
+  /* Teinte vert signal — préserve l'animation du GIF. */
+  filter: var(--logo-tint);
+  transition: filter var(--dur) var(--ease);
 }
+.nav-brand:hover .nav-brand__logo img { filter: var(--logo-tint) brightness(1.08); }
 .nav-brand__text {
   display: flex;
   align-items: baseline;
   gap: var(--sp-2);
   line-height: 1;
+  /* Petite correction optique : le logo a un poids visuel plus lourd que les
+     capitales de la wordmark ; on remonte le texte de 1 px pour aligner les
+     centres perçus. */
+  transform: translateY(-0.5px);
 }
 .nav-brand .mark {
   font-family: var(--f-display);
@@ -491,6 +507,29 @@ em, i { font-style: normal; font-weight: 500; }
 }
 @media (min-width: 900px) {
   .hero { padding-block: var(--sp-9) var(--sp-10); min-height: calc(100vh - 64px); display: flex; align-items: center; }
+}
+
+/* Variant : contenu ancré en haut plutôt que centré verticalement.
+   Utilisé sur la home pour que la H1 démarre juste sous le header,
+   à l'endroit où se trouvait l'ancien kicker.
+   Padding-top et padding-bottom réduits pour que tout le bloc
+   (H1 + lede + CTAs + meta) tienne dans le 1er écran. */
+@media (min-width: 900px) {
+  .hero.hero--top {
+    align-items: flex-start;
+    padding-top: var(--sp-5);
+    padding-bottom: var(--sp-8);
+    min-height: auto;
+  }
+}
+
+/* Variant : décale le contenu centré de 48 px vers le haut (1 ligne de grille).
+   On réduit le padding-top à 0 — grâce au centrage vertical, le contenu
+   remonte de (96 - 0) / 2 = 48 px, tout en préservant la respiration globale. */
+@media (min-width: 900px) {
+  .hero.hero--up {
+    padding-top: 0;
+  }
 }
 
 .hero__inner {
@@ -978,6 +1017,13 @@ em, i { font-style: normal; font-weight: 500; }
   color: var(--c-system);
 }
 .field label .req { color: var(--c-signal); }
+.field label .opt {
+  color: var(--c-system);
+  font-weight: 400;
+  opacity: 0.65;
+  margin-left: 0.35em;
+  letter-spacing: 0.04em;
+}
 .field input,
 .field textarea,
 .field select {
@@ -1137,22 +1183,27 @@ em, i { font-style: normal; font-weight: 500; }
 .brand-inline {
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-3);
+  gap: 10px;
   line-height: 1;
 }
 .brand-inline img {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
   display: block;
   flex: 0 0 auto;
+  filter: var(--logo-tint);
+  transition: filter var(--dur) var(--ease);
 }
+.brand-inline:hover img { filter: var(--logo-tint) brightness(1.08); }
 .brand-inline .mark {
   font-family: var(--f-display);
   font-weight: 600;
   font-size: var(--fs-lg);
   letter-spacing: -0.02em;
   color: var(--c-ink);
+  /* Correction optique (idem header) */
+  transform: translateY(-0.5px);
 }
 
 /* ============================================================

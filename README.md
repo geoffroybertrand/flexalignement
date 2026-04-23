@@ -54,20 +54,27 @@ Les placeholders LACT (800h · 2 ans), SYPRESS, Assurance Maladie, binôme Charl
 
 | Endpoint | Usage sur le site |
 |---|---|
-| `/30min` | Cadrage entreprise · nav CTA par défaut · contact page |
-| `/seance-decouverte` | Appel découverte 20 min · particuliers hero · particuliers section tarifs (gratuit) |
-| `/seance-individuelle` | Réservation séance payante · particuliers tarifs individuel & couple |
+| `/cadrage-30-min-entreprise` | Cadrage entreprise · nav CTA par défaut · contact page · footer de toutes les pages |
+| `/decouverte-gratuite-20-min` | Appel découverte gratuit · hero `/particuliers` · CTA final particuliers · tarif « Premier échange » |
+| `/seance-individuelle-1h` | Réservation séance payante · tarifs individuel & couple sur `/particuliers` |
 
 Pour changer un endpoint, cherche `calendly.com/geoffbertrand/` dans tous les fichiers et remplace.
 
 ## Logo
 
-Le logo « Cible » utilisé est `images/Logo_Coach.gif` (animé, 777 KB). Intégré dans le header à 40×40 px et dans le footer à 32×32 px. Pour changer :
+Le logo « Cible » utilisé est `images/Logo_Coach.gif` (animé, 777 KB). Intégré dans le header à 28×28 px et dans le footer à 26×26 px — dimensionné pour s'aligner optiquement sur la cap-height du wordmark « Flex Alignement ».
 
-- Remplace le fichier dans `images/` en gardant le nom, OU
-- Cherche `images/Logo_Coach.gif` dans tous les fichiers et remplace le chemin
+Le GIF d'origine est en palette orange/amber. Il est **recoloré en vert signal (#3D6B52) via une chaîne de filtres CSS** qui préserve l'animation (le filtre s'applique à chaque frame). La chaîne est stockée dans le token `--logo-tint` dans `:root` (début de `main.css`).
 
-Note : l'animation GIF ne peut pas être mise en pause via CSS. Si un fallback statique pour `prefers-reduced-motion` devient nécessaire, il faudra servir une PNG du premier frame via `<picture>`.
+### Changer le logo
+- Remplace `images/Logo_Coach.gif` en gardant le nom, OU
+- Cherche `Logo_Coach.gif` dans tous les fichiers et remplace le chemin
+
+### Changer la teinte
+Si tu changes `--c-signal`, régénère la chaîne de filtres via [codepen.io/sosuke/pen/Pjoqqp](https://codepen.io/sosuke/pen/Pjoqqp) et remplace la valeur de `--logo-tint` dans `main.css`. Ou supprime `--logo-tint` si tu veux garder le logo dans ses couleurs d'origine.
+
+### Note `prefers-reduced-motion`
+L'animation GIF ne peut pas être mise en pause via CSS. Si un fallback statique devient nécessaire pour les utilisateurs avec `prefers-reduced-motion`, il faudra servir une PNG du premier frame via `<picture>`.
 
 ### Changer un texte
 
@@ -82,7 +89,7 @@ Dépose le fichier dans `/images`, puis remplace le chemin dans le HTML (`images
 ### Changer les liens Calendly / e-mail
 
 Cherche dans tous les fichiers :
-- `calendly.com/geoffbertrand/30min` → ton lien Cal.com / Calendly
+- `calendly.com/geoffbertrand/cadrage-30-min-entreprise` → ton lien Cal.com / Calendly
 - `geoffbertrand@gmail.com` → ton adresse
 
 ### Changer la palette de couleurs
