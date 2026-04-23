@@ -1,974 +1,374 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex Alignement Thérapie - Coaching Systémique | Geoffroy Bertrand</title>
-    <meta name="description" content="Thérapie systémique brève pour anxiété, conflits relationnels, couples, TOC, burnout. Approche moderne basée sur les neurosciences.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Alignement — Coaching systémique stratégique · École de Palo Alto</title>
+  <meta name="description" content="Coach systémique stratégique. Interventions pour dirigeant·es, équipes et particuliers qui veulent sortir de boucles installées. 8 à 12 séances, rarement plus. École de Palo Alto — formation LACT.">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Flex Alignement — Coach systémique stratégique">
+  <meta property="og:description" content="Quand un système tourne en boucle, il faut regarder ailleurs que les personnes. Interventions courtes et précises, héritage de l'école de Palo Alto.">
+  <meta property="og:url" content="https://flexalignement.fr/">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Flex Alignement",
+    "description": "Coaching systémique stratégique pour organisations et particuliers. Approche de l'école de Palo Alto (LACT).",
+    "provider": {
+      "@type": "Person",
+      "name": "Geoffroy Bertrand",
+      "jobTitle": "Coach systémique stratégique",
+      "url": "https://flexalignement.fr/a-propos.html"
+    },
+    "url": "https://flexalignement.fr/",
+    "areaServed": "France",
+    "priceRange": "€€"
+  }
+  </script>
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <div class="nav-brand">
-                <img src="images/Logo_Coach.gif" alt="Flex Alignement" class="nav-logo">
-                <div class="nav-text">
-                    <span class="brand-name">Flex Alignement</span>
-                    <span class="brand-subtitle">thérapie</span>
-                </div>
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-brand" aria-label="Flex Alignement — accueil">
+        <span class="nav-brand__logo" aria-hidden="true"><img src="images/Logo_Coach.gif" alt="" /></span>
+        <span class="nav-brand__text">
+          <span class="mark">Flex Alignement</span>
+          <span class="sub">Systémique</span>
+        </span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="particuliers.html">Particuliers</a></li>
+        <li><a href="approche.html">Approche</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn--primary btn--sm">Prendre RDV <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menu">
+        <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <line class="bar bar1" x1="2" y1="4" x2="16" y2="4" stroke="currentColor" stroke-width="1.5"/>
+          <line class="bar bar2" x1="2" y1="9" x2="16" y2="9" stroke="currentColor" stroke-width="1.5"/>
+          <line class="bar bar3" x1="2" y1="14" x2="16" y2="14" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="nav-mobile" data-open="false">
+      <ul role="list">
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="particuliers.html">Particuliers</a></li>
+        <li><a href="approche.html">Approche</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav-cta-mobile">Prendre RDV <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero grid-bg" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div>
+          <span class="kicker">Coach systémique stratégique · École de Palo Alto</span>
+          <h1 id="hero-title" class="hero__title">
+            Quand un système tourne en boucle, il faut regarder <span class="signal-word">ailleurs</span> que les personnes.
+          </h1>
+          <p class="hero__lede">
+            J'accompagne dirigeant·es, équipes et particuliers à sortir de schémas installés — en 8 à 12 séances, rarement plus.
+          </p>
+          <div class="hero__cta">
+            <a href="entreprises.html" class="btn btn--primary">Je suis une entreprise <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="particuliers.html" class="btn btn--ghost">Je suis un·e particulier·e <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero__meta">
+            <div class="mono-line">
+              <span>8 À 12 SÉANCES</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>APPROCHE PALO ALTO — LACT</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>VISIO / PARIS</span>
             </div>
-
-            <div class="nav-menu" id="navMenu">
-                <!-- Dropdown for Services -->
-                <div class="nav-dropdown">
-                    <button class="nav-link dropdown-toggle">
-                        Ce que je traite <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a href="#conflits" class="dropdown-item">Conflits & Relations</a>
-                        <a href="#couples" class="dropdown-item">Couples</a>
-                        <a href="#lgbtqi" class="dropdown-item">LGBTQI+</a>
-                        <a href="#toc" class="dropdown-item">TOC</a>
-                        <a href="#burnout" class="dropdown-item">Burnout</a>
-                        <a href="#adolescents" class="dropdown-item">Adolescents</a>
-                    </div>
-                </div>
-
-                <a href="#about" class="nav-link">À propos</a>
-                <a href="#approche" class="nav-link">Mon approche</a>
-                <a href="#tarifs" class="nav-link">Tarifs</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <a href="#blog" class="nav-link">Blog</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="https://calendly.com/geoffbertrand/30min" class="nav-cta" target="_blank">Prendre RDV</a>
-            </div>
-
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="accueil" class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="images/profil.mp4" type="video/mp4">
-            <!-- Fallback pour les navigateurs qui ne supportent pas la vidéo -->
-            <img src="images/profil.png" alt="Geoffroy Bertrand">
-        </video>
-        <div class="hero-overlay">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="cta-content">
-                        <h2>Prêt.e pour le changement ?</h2>
-                        <p class="cta-note">Pour votre santé, bien-être, et performance, trouvez l'alignement qui vous apprendra à triompher des obstacles grâce à l'écoute bienveillante, l'expertise systémique stratégique et le biofeedback.</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="hero__diagram" data-hero-diagram aria-hidden="true"></div>
+      </div>
     </section>
 
-    <!-- Introduction Section -->
-    <section class="intro-section">
-        <div class="container">
-            <div class="intro-content">
-                <h2 class="section-title centered">En quoi Flex Alignement peut vous être utile ?</h2>
-                <p class="intro-text">
-                    Peut-être ressentez-vous de l'anxiété ou un un mal-être persistant, vivez-vous des conflits relationnels à répétition qui vous épuise.
-                    Je comprends. Mon approche combine la thérapie brève systémique et stratégique, 
-                    ainsi que les dernières avancées en neurosciences pour vous offrir un accompagnement moderne, efficace et efficient.
-                </p>
-                <div class="intro-features">
-                    <div class="feature-item">
-                        <i class="fas fa-brain"></i>
-                        <h3>Approche Neuroscientifique</h3>
-                        <p>Basée sur la compréhension du cerveau et de ses mécanismes.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-clock"></i>
-                        <h3>Thérapie Brève</h3>
-                        <p>Des résultats concrets en 6 à 12 séances en moyenne</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-heart"></i>
-                        <h3>Espace Bienveillant</h3>
-                        <p>Un accompagnement sans jugement, adapté à votre rythme</p>
-                    </div>
-                </div>
-            </div>
+    <!-- ============================================================
+         CREDS STRIP — accréditations
+         ============================================================ -->
+    <div class="container" style="padding-top: 0;">
+      <div class="creds-strip reveal" aria-label="Accréditations professionnelles">
+        <span class="creds-strip__label">Accréditations</span>
+        <span class="creds-strip__item">LACT · 800 H · 2 ANS</span>
+        <span class="creds-strip__item">PARTENAIRE AFFILIÉ LACT</span>
+        <span class="creds-strip__item">RÉSEAU SYPRESS</span>
+        <span class="creds-strip__item">ASSURANCE MALADIE</span>
+        <span class="creds-strip__item">INGÉNIEUR IA · SIGNAL</span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         01 — CE QUE JE FAIS
+         ============================================================ -->
+    <section class="section" aria-labelledby="offer-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-number">01 — CE QUE JE FAIS</span>
+          <h2 id="offer-title">Trois dispositifs, une même approche.</h2>
+          <p>L'intervention est toujours systémique et brève. Ce qui change, c'est le système qu'on observe ensemble.</p>
         </div>
+
+        <div class="card-grid card-grid--featured reveal">
+          <article class="card card--feature">
+            <span class="card__number">— ENTREPRISES · PRIORITAIRE</span>
+            <h3 class="card__title">Coaching de dirigeant·es &amp; intervention d'équipe</h3>
+            <p class="card__text">Conflits installés, décisions qui ne tiennent pas, équipes qui se désengagent, prise de poste critique, board en désaccord chronique. Cadre tripartite, facturation entreprise, confidentialité absolue.</p>
+            <div class="card__foot">
+              <span class="mono">DURÉE · 8–12 SÉANCES</span>
+              <a href="entreprises.html" class="link-arrow">Voir les interventions <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="card__number">— PARTICULIERS</span>
+            <h3 class="card__title">Accompagnement individuel</h3>
+            <p class="card__text">Schémas qui se répètent, transitions de vie, relation au travail, anxiété installée. Changement durable, pas introspection sans fin.</p>
+            <div class="card__foot">
+              <a href="particuliers.html#individuel" class="link-arrow">En savoir plus <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="card__number">— COUPLES &amp; FAMILLE</span>
+            <h3 class="card__title">Thérapie de couple &amp; parents / ados</h3>
+            <p class="card__text">Quand une relation tourne en rond. On travaille sur l'interaction, pas sur la personnalité de l'un ou de l'autre.</p>
+            <div class="card__foot">
+              <a href="particuliers.html#couple" class="link-arrow">En savoir plus <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="section-title centered">Ce que je traite</h2>
-            <p class="section-subtitle">
-                Chaque parcours thérapeutique est unique. Voici les principales problématiques
-                que j'accompagne avec une approche personnalisée.
+    <!-- ============================================================
+         02 — PREUVES / VERBATIMS
+         ============================================================ -->
+    <section class="section section--alt" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-number">02 — CE QU'ILS ET ELLES EN DISENT</span>
+          <h2 id="trust-title">Commanditaires &amp; coaché·es.</h2>
+          <p>Citations anonymisées. Les missions entreprises sont soumises à convention de confidentialité : les secteurs sont donnés, jamais les noms.</p>
+        </div>
+
+        <div class="verbatim-grid reveal">
+          <figure class="verbatim">
+            <q>Mes rituels obsessionnels me prenaient 3&nbsp;heures par jour. Grâce à l'approche stratégique, j'ai repris le contrôle en 10 séances.</q>
+            <figcaption class="who">SOPHIE L. · TOC &amp; ANXIÉTÉ</figcaption>
+          </figure>
+          <figure class="verbatim">
+            <q>Notre communication était devenue toxique. Nous avons appris à nous écouter vraiment et retrouvé notre complicité.</q>
+            <figcaption class="who">JULIE &amp; THOMAS · COUPLE</figcaption>
+          </figure>
+          <figure class="verbatim">
+            <q>Les tensions avec mes parents étaient invivables. J'ai appris à changer ma position dans la famille.</q>
+            <figcaption class="who">MARC D. · CONFLITS FAMILIAUX</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 — L'APPROCHE EN 60S
+         ============================================================ -->
+    <section class="section" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-number">03 — L'APPROCHE EN 60 SECONDES</span>
+          <h2 id="approach-title">On ne règle pas un blocage en poussant plus fort dessus.</h2>
+          <p>L'approche systémique stratégique s'intéresse aux interactions plutôt qu'aux personnes, aux tentatives de solution qui entretiennent le problème plutôt qu'aux causes lointaines. C'est pour ça qu'elle est courte.</p>
+        </div>
+
+        <div class="process reveal">
+          <article class="process__step">
+            <h3>Diagnostic opératoire</h3>
+            <p>On cartographie ensemble ce qui se passe réellement — les interactions, pas les personnalités. On repère surtout les <em>tentatives de solution</em> qui, en voulant résoudre, entretiennent.</p>
+            <span class="meta">2–3 SÉANCES</span>
+          </article>
+          <article class="process__step">
+            <h3>Actions ciblées</h3>
+            <p>Interventions précises, calibrées pour produire un changement observable entre deux séances. Pas de méditation, pas d'introspection sans fin. Du concret, testé en conditions réelles.</p>
+            <span class="meta">5–8 SÉANCES</span>
+          </article>
+          <article class="process__step">
+            <h3>Clôture</h3>
+            <p>On ferme dès que le système a retrouvé sa capacité à fonctionner sans nous. C'est un engagement : pas de dépendance, pas de suivi sans fin.</p>
+            <span class="meta">1 SÉANCE</span>
+          </article>
+        </div>
+
+        <div class="reveal" style="margin-top: var(--sp-7); display: flex; gap: var(--sp-3); flex-wrap: wrap;">
+          <a href="approche.html" class="btn btn--ghost">Lire l'approche en détail <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 — PORTRAIT COURT
+         ============================================================ -->
+    <section class="section section--alt" aria-labelledby="bio-title">
+      <div class="container">
+        <div class="split reveal">
+          <aside class="split-aside">
+            <span class="mono">04 — QUI INTERVIENT</span>
+          </aside>
+          <div>
+            <h2 id="bio-title" style="margin-bottom: var(--sp-5);">Geoffroy Bertrand — coach systémique stratégique.</h2>
+            <p style="font-size: var(--fs-lg); line-height: 1.5; max-width: 56ch; margin-bottom: var(--sp-4);">
+              Ingénieur formé à l'IA et à la théorie du signal, devenu coach systémique stratégique après <strong>800 heures de formation LACT</strong> — école de Palo Alto, lignée Watzlawick, Weakland, Nardone. Pour les missions d'entreprise en difficulté, j'interviens en binôme avec <strong>Charles Moulette</strong>, avocat M&amp;A et expert-comptable.
             </p>
-
-            <div class="services-grid">
-                <!-- Conflits & Relations -->
-                <div class="service-card" id="conflits">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Conflits & Relations</h3>
-                    <p>
-                        Les conflits répétitifs épuisent. J'utilise l'approche systémique pour identifier
-                        les patterns relationnels dysfonctionnels et vous aider à créer des dynamiques plus saines.
-                    </p>
-                    <ul class="service-list">
-                        <li>Conflits familiaux</li>
-                        <li>Difficultés au travail</li>
-                        <li>Relations toxiques</li>
-                        <li>Communication inéfficace</li>
-                    </ul>
-                    <a href="#contact" class="service-link">En savoir plus →</a>
-                </div>
-
-                <!-- Couples -->
-                <div class="service-card" id="couples">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Thérapie de Couple</h3>
-                    <p>
-                        Retrouvez la complicité et l'harmonie dans votre couple. Nous travaillons ensemble
-                        pour dépasser les crises et renforcer votre lien.
-                    </p>
-                    <ul class="service-list">
-                        <li>Crises et conflits</li>
-                        <li>Problèmes de communication</li>
-                        <li>Infidélité et reconstruction</li>
-                        <li>Préparation au mariage</li>
-                    </ul>
-                    <a href="#contact" class="service-link">En savoir plus →</a>
-                </div>
-
-                <!-- LGBTQI+ -->
-                <div class="service-card" id="lgbtqi">
-                    <div class="service-icon">
-                        <i class="fas fa-rainbow"></i>
-                    </div>
-                    <h3>LGBTQI+ Affirmatif</h3>
-                    <p>
-                        Un espace sûr et inclusif pour explorer votre identité, vos relations et votre
-                        bien-être sans crainte de jugement.
-                    </p>
-                    <ul class="service-list">
-                        <li>Coming out et acceptation</li>
-                        <li>Questions d'identité</li>
-                        <li>Relations et familles</li>
-                        <li>Discrimination et stress minoritaire</li>
-                    </ul>
-                    <a href="#contact" class="service-link">En savoir plus →</a>
-                </div>
-
-                <!-- TOC -->
-                <div class="service-card" id="toc">
-                    <div class="service-icon">
-                        <i class="fas fa-sync"></i>
-                    </div>
-                    <h3>TOC & TOP</h3>
-                    <p>
-                        Spécialisé dans le traitement des troubles obsessionnels compulsifs avec une
-                        approche systémique stratégique éprouvée.
-                    </p>
-                    <ul class="service-list">
-                        <li>Obsessions et compulsions</li>
-                        <li>Rituels envahissants</li>
-                        <li>Perfectionnisme pathologique</li>
-                        <li>Anxiété de vérification</li>
-                    </ul>
-                    <a href="#contact" class="service-link">En savoir plus →</a>
-                </div>
-
-                <!-- Burnout -->
-                <div class="service-card" id="burnout">
-                    <div class="service-icon">
-                        <i class="fas fa-battery-quarter"></i>
-                    </div>
-                    <h3>Burnout</h3>
-                    <p>
-                        Retrouvez votre énergie et votre équilibre. J'accompagne votre reconstruction
-                        après l'épuisement professionnel.
-                    </p>
-                    <ul class="service-list">
-                        <li>Épuisement émotionnel</li>
-                        <li>Stress chronique</li>
-                        <li>Perte de sens au travail</li>
-                        <li>Prévention de la rechute</li>
-                    </ul>
-                    <a href="#contact" class="service-link">En savoir plus →</a>
-                </div>
-
-                <!-- Adolescents -->
-                <div class="service-card" id="adolescents">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Adolescents & TDAH</h3>
-                    <p>
-                        Un accompagnement adapté aux défis uniques de l'adolescence, dans le respect
-                        de leur autonomie grandissante.
-                    </p>
-                    <ul class="service-list">
-                        <li>Anxiété et stress scolaire</li>
-                        <li>Difficultés relationnelles</li>
-                        <li>Estime de soi</li>
-                        <li>TDA avec ou sans hyperactvité</li>
-                    </ul>
-                    <a href="#contact" class="service-link">En savoir plus →</a>
-                </div>
+            <p style="color: var(--c-signal); font-weight: 500; margin-bottom: var(--sp-5);">Le premier systémicien qui pense en ingénieur.</p>
+            <div class="mono-line" style="margin-top: var(--sp-5); margin-bottom: var(--sp-6);">
+              <span>FORMATION LACT · 800 H</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>SYPRESS</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>ASSURANCE MALADIE</span>
             </div>
+            <a href="a-propos.html" class="btn btn--ghost">Parcours &amp; déontologie <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/profil_picture.jpeg" alt="Geoffroy Bertrand">
-                    <div class="about-decoration"></div>
-                </div>
-                <div class="about-text">
-                    <h2 class="section-title">À propos de moi</h2>
-                    <h3 class="about-subtitle">Geoffroy Bertrand, Coach Systémique</h3>
-                    <p>
-                        Passionné par la complexité de l'esprit humain et les dynamiques relationnelles,
-                        j'ai choisi de me spécialiser dans l'approche systémique après avoir
-                        constaté son efficacité remarquable.
-                    </p>
-                    <p>
-                        En tant qu'expert en algorithme et fusion d'information, la formation de coach systémique à LACT, s'inscrit directement dans ma volonté 
-                        de mettre la science au service de l'humain et les défis de ce monde ambigüe, incertain, complexe et volatile. Ma pratique intègre également les
-                        neurosciences cognitives et le biofeedback pour une approche holistique du changement.
-                    </p>
-                    <div class="about-credentials">
-                        <div class="credential-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>Diplômé LACT - Coaching en Thérapie Brève Systémique - aspirant Guru systémique:)</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-brain"></i>
-                            <span>Diplômé Institut Neurosens - Praticien en Neurofeedback</span>
-                        </div>
-                        <div class="credential-item">
-                            <i class="fas fa-heart-pulse"></i>
-                            <span>Judoka ceinture noire, pianiste et voyageur</span>
-                        </div>
-                    </div>
-                    <blockquote class="about-quote">
-                        "Je crois profondément que chacun possède les ressources nécessaires pour
-                        surmonter ses difficultés. Mon rôle est de vous aider à les mobiliser."
-                    </blockquote>
-                </div>
-            </div>
+    <!-- ============================================================
+         05 — FAQ CONDENSÉE
+         ============================================================ -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-number">05 — TROIS QUESTIONS FRÉQUENTES</span>
+          <h2 id="faq-title">Ce que les gens veulent savoir avant d'appeler.</h2>
         </div>
+
+        <ul class="faq reveal" role="list">
+          <li>
+            <details>
+              <summary>Combien de séances, exactement ?</summary>
+              <p>Pour la majorité des missions, 8 à 12 séances. Certaines situations très ciblées (préparation d'une prise de poste par exemple) se règlent en 5 à 7. Les missions qui dureraient plus de 15 séances sont rares — et, le cas échéant, on en reparle ensemble à mi-parcours.</p>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Présentiel ou visio ?</summary>
+              <p>Les deux fonctionnent très bien. Visio par défaut (plus souple, pas moins efficace dans cette approche). Présentiel à Paris pour les missions qui le justifient, notamment les interventions d'équipe.</p>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Comment est garantie la confidentialité en mission entreprise ?</summary>
+              <p>Par convention écrite tripartite signée avant toute séance. Le contenu des séances n'est jamais remonté au commanditaire. Un point d'étape formel est organisé à mi-parcours, uniquement sur les indicateurs convenus — jamais sur les confidences. Détails complets sur <a href="entreprises.html#cadre-title" class="link-arrow" style="display:inline;">la page Entreprises</a>.</p>
+            </details>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Approach Section -->
-    <section id="approche" class="approach-section">
-        <div class="container">
-            <h2 class="section-title centered">Mon Approche Thérapeutique</h2>
-            <p class="section-subtitle">
-                Une méthode intégrative qui combine le meilleur de la thérapie systémique,
-                des neurosciences et des technologies modernes.
-            </p>
-
-            <div class="approach-pillars">
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Approche Systémique</h3>
-                    <p>
-                        Issue de l'École de Palo Alto, cette approche considère que les problèmes
-                        naissent et se maintiennent dans les interactions. En modifiant ces patterns,
-                        nous créons des changements durables.
-                    </p>
-                    <div class="pillar-benefits">
-                        <h4>Bénéfices :</h4>
-                        <ul>
-                            <li>Vision globale des problématiques</li>
-                            <li>Solutions concrètes et rapides</li>
-                            <li>Changements qui perdurent</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-                    <h3>Neurosciences</h3>
-                    <p>
-                        Les découvertes récentes sur le cerveau nous permettent de comprendre comment
-                        se forment les habitudes et les émotions. Cette connaissance guide nos interventions
-                        pour un changement efficace.
-                    </p>
-                    <div class="pillar-benefits">
-                        <h4>Applications :</h4>
-                        <ul>
-                            <li>Reprogrammation des circuits neuronaux</li>
-                            <li>Gestion du stress et de l'anxiété</li>
-                            <li>Optimisation des capacités cognitives</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <i class="fas fa-wave-square"></i>
-                    </div>
-                    <h3>Biofeedback</h3>
-                    <p>
-                        Ces technologies permettent de visualiser en temps réel l'activité de votre
-                        système nerveux. Vous apprenez ainsi à mieux réguler vos états internes
-                        pour un bien-être durable.
-                    </p>
-                    <div class="pillar-benefits">
-                        <h4>Techniques utilisées :</h4>
-                        <ul>
-                            <li>Cohérence cardiaque</li>
-                            <li>Neurofeedback EEG</li>
-                            <li>Régulation du système nerveux</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="approach-process">
-                <h3 class="process-title">Notre Parcours Ensemble</h3>
-                <div class="process-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker">1</div>
-                        <div class="timeline-content">
-                            <h4>Première Rencontre</h4>
-                            <p>Nous explorons ensemble votre situation et définissons vos objectifs de changement.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">2</div>
-                        <div class="timeline-content">
-                            <h4>Analyse Systémique</h4>
-                            <p>J'identifie les patterns qui maintiennent vos difficultés et les leviers de changement.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">3</div>
-                        <div class="timeline-content">
-                            <h4>Interventions Stratégiques</h4>
-                            <p>Nous mettons en place des actions concrètes pour créer les changements désirés.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">4</div>
-                        <div class="timeline-content">
-                            <h4>Consolidation</h4>
-                            <p>Nous ancrons les nouveaux patterns pour des résultats qui perdurent dans le temps.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ============================================================
+         06 — CTA FINAL
+         ============================================================ -->
+    <section class="section section--alt" aria-labelledby="final-cta">
+      <div class="container">
+        <div class="cta-block reveal">
+          <span class="section-number">06 — PREMIER ÉCHANGE</span>
+          <h2 id="final-cta">Envie d'un premier échange ?</h2>
+          <p>30 minutes en visio, sans engagement, pour qualifier votre situation et voir si cette approche est la bonne. Gratuit pour les particuliers comme pour les entreprises.</p>
+          <div class="cta-actions">
+            <a href="contact.html#entreprise" class="btn btn--primary">Cadrage entreprise <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="contact.html#particulier" class="btn btn--ghost">Appel découverte particulier <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="mono-line cta-meta">
+            <span>30 MIN · VISIO · GRATUIT</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>RÉPONSE &lt; 48 H</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>SANS ENGAGEMENT</span>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title centered">Ils ont transformé leur vie</h2>
-            <p class="section-subtitle">Découvrez comment l'approche systémique a aidé mes clients</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="statusbar" role="status" aria-live="polite">
+        <span class="status-dot">DISPONIBLE</span>
+        <span>PROCHAINE OUVERTURE <strong data-status-next>—</strong></span>
+        <span>3 MISSIONS ACTIVES</span>
+        <span>RÉPONSE &lt; 48 H</span>
+        <span style="margin-left: auto;">PARIS · VISIO · FR / EN</span>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-block">
+            <span class="brand-inline"><img src="images/Logo_Coach.gif" alt="" /><span class="mark">Flex Alignement</span></span>
+          </div>
+          <p>Coaching systémique stratégique pour les organisations et les personnes qui veulent sortir de boucles installées. École de Palo Alto — formation LACT.</p>
         </div>
-
-        <div class="testimonials-carousel">
-            <div class="testimonials-track">
-                <!-- TOC & Anxiété -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Mes rituels obsessionnels me prenaient 3h par jour. Grâce à l'approche stratégique, j'ai repris le contrôle en 10 séances."
-                    </p>
-                    <div class="testimonial-author">Sophie L. - <span class="testimonial-tag">TOC & Anxiété</span></div>
-                </div>
-
-                <!-- Burnout -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "J'étais épuisé, vidé. Geoffroy m'a aidé à comprendre les mécanismes du burn-out et à retrouver mon énergie."
-                    </p>
-                    <div class="testimonial-author">Alexandre M. - <span class="testimonial-tag">Burn-out</span></div>
-                </div>
-
-                <!-- Couple -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Notre communication était devenue toxique. Nous avons appris à nous écouter vraiment et retrouvé notre complicité."
-                    </p>
-                    <div class="testimonial-author">Julie & Thomas - <span class="testimonial-tag">Thérapie de couple</span></div>
-                </div>
-
-                <!-- Adolescent -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Mon fils de 16 ans était en échec scolaire. Le biofeedback et l'approche systémique ont changé sa vie."
-                    </p>
-                    <div class="testimonial-author">Isabelle P. - <span class="testimonial-tag">Adolescent TDAH</span></div>
-                </div>
-
-                <!-- Conflits familiaux -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Les tensions avec mes parents étaient invivables. J'ai appris à changer ma position dans la famille."
-                    </p>
-                    <div class="testimonial-author">Marc D. - <span class="testimonial-tag">Conflits familiaux</span></div>
-                </div>
-
-                <!-- LGBTQI+ -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Enfin un thérapeute qui comprend mes enjeux sans jugement. J'ai pu être moi-même et travailler sur mes vraies difficultés."
-                    </p>
-                    <div class="testimonial-author">Sam R. - <span class="testimonial-tag">Accompagnement LGBTQI+</span></div>
-                </div>
-
-                <!-- Relations toxiques -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "J'attirais toujours le même type de partenaires toxiques. J'ai enfin cassé ce schéma répétitif."
-                    </p>
-                    <div class="testimonial-author">Laura B. - <span class="testimonial-tag">Relations toxiques</span></div>
-                </div>
-
-                <!-- Stress au travail -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Le biofeedback m'a permis de gérer mon stress en temps réel. Je suis plus performant et serein au travail."
-                    </p>
-                    <div class="testimonial-author">Philippe K. - <span class="testimonial-tag">Stress professionnel</span></div>
-                </div>
-
-                <!-- Phobies -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Ma phobie de l'avion me limitait dans ma carrière. En 5 séances, j'ai pu reprendre l'avion sereinement."
-                    </p>
-                    <div class="testimonial-author">Marie T. - <span class="testimonial-tag">Phobies</span></div>
-                </div>
-
-                <!-- Dépression -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "L'approche systémique m'a permis de sortir du cercle vicieux de la dépression. Je revis enfin."
-                    </p>
-                    <div class="testimonial-author">Paul C. - <span class="testimonial-tag">Dépression</span></div>
-                </div>
-
-                <!-- Transition de vie -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Face à ma reconversion professionnelle, j'étais perdu. L'accompagnement m'a aidé à clarifier ma direction."
-                    </p>
-                    <div class="testimonial-author">Nathalie V. - <span class="testimonial-tag">Transition de vie</span></div>
-                </div>
-
-                <!-- Deuil -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Le deuil de mon père me paralysait. J'ai pu traverser cette épreuve et retrouver la paix intérieure."
-                    </p>
-                    <div class="testimonial-author">François R. - <span class="testimonial-tag">Deuil</span></div>
-                </div>
-
-                <!-- Clones pour le défilement infini -->
-                <!-- TOC & Anxiété -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Mes rituels obsessionnels me prenaient 3h par jour. Grâce à l'approche stratégique, j'ai repris le contrôle en 10 séances."
-                    </p>
-                    <div class="testimonial-author">Sophie L. - <span class="testimonial-tag">TOC & Anxiété</span></div>
-                </div>
-
-                <!-- Burnout -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "J'étais épuisé, vidé. Geoffroy m'a aidé à comprendre les mécanismes du burn-out et à retrouver mon énergie."
-                    </p>
-                    <div class="testimonial-author">Alexandre M. - <span class="testimonial-tag">Burn-out</span></div>
-                </div>
-
-                <!-- Couple -->
-                <div class="testimonial-card">
-                    <div class="testimonial-icon">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">
-                        "Notre communication était devenue toxique. Nous avons appris à nous écouter vraiment et retrouvé notre complicité."
-                    </p>
-                    <div class="testimonial-author">Julie & Thomas - <span class="testimonial-tag">Thérapie de couple</span></div>
-                </div>
-            </div>
+        <div>
+          <h4>Missions</h4>
+          <ul>
+            <li><a href="entreprises.html">Entreprises</a></li>
+            <li><a href="particuliers.html">Particuliers</a></li>
+            <li><a href="approche.html">L'approche</a></li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="tarifs" class="pricing-section">
-        <div class="container">
-            <h2 class="section-title centered">Tarifs et Modalités</h2>
-            <p class="section-subtitle">
-                Un investissement dans votre bien-être, avec des tarifs transparents et accessibles.
-            </p>
-
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Consultation Découverte</h3>
-                        <div class="price">
-                            <span class="amount">Gratuit</span>
-                            <span class="duration">30 minutes</span>
-                        </div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Rencontre sans engagement</li>
-                            <li><i class="fas fa-check"></i> Évaluation personnalisée</li>
-                            <li><i class="fas fa-check"></i> Présentation de l'approche</li>
-                            <li><i class="fas fa-check"></i> Plan de traitement proposé</li>
-                            <li><i class="fas fa-check"></i> Totalement confidentiel</li>
-                        </ul>
-                    </div>
-                    <a href="https://calendly.com/geoffbertrand/seance-decouverte" class="btn btn-outline" target="_blank">
-                        Réserver
-                    </a>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Plus populaire</div>
-                    <div class="pricing-header">
-                        <h3>Séance Individuelle</h3>
-                        <div class="price">
-                            <span class="amount">70€</span>
-                            <span class="duration">60 minutes</span>
-                        </div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Séance complète 60 min</li>
-                            <li><i class="fas fa-check"></i> Suivi personnalisé</li>
-                            <li><i class="fas fa-check"></i> Exercices pratiques</li>
-                            <li><i class="fas fa-check"></i> Support entre séances</li>
-                            <li><i class="fas fa-check"></i> Présentiel ou en ligne</li>
-                        </ul>
-                    </div>
-                    <a href="https://calendly.com/geoffbertrand/seance-individuelle" class="btn btn-primary" target="_blank">
-                        Réserver
-                    </a>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Forfait 6 Séances</h3>
-                        <div class="price">
-                            <span class="amount">390€</span>
-                            <span class="duration">6 x 60 minutes</span>
-                        </div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Économie de 30€</li>
-                            <li><i class="fas fa-check"></i> Suivi thérapeutique complet</li>
-                            <li><i class="fas fa-check"></i> Planification flexible</li>
-                            <li><i class="fas fa-check"></i> Priorité de réservation</li>
-                            <li><i class="fas fa-check"></i> Paiement en 2 fois</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="btn btn-outline">
-                        Me contacter
-                    </a>
-                </div>
-            </div>
-
-            <div class="pricing-info">
-                <p><i class="fas fa-info-circle"></i> Moyens de paiement acceptés : CB, espèces, virement</p>
-                <p><i class="fas fa-calendar-xmark"></i> Annulation gratuite jusqu'à 24h avant la séance</p>
-                <p><i class="fas fa-shield-halved"></i> Certaines mutuelles remboursent les séances de coaching</p>
-            </div>
+        <div>
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="a-propos.html">Qui je suis</a></li>
+            <li><a href="contact.html">Contact &amp; RDV</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog-section">
-        <div class="container">
-            <h2 class="section-title centered">Blog & Ressources</h2>
-            <p class="section-subtitle">
-                Des articles et réflexions pour nourrir votre cheminement personnel
-            </p>
-
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog-1-placeholder.jpg" alt="Article blog">
-                        <span class="blog-category">Anxiété</span>
-                    </div>
-                    <div class="blog-content">
-                        <h3>5 techniques pour calmer une crise d'anxiété</h3>
-                        <p>
-                            Découvrez des méthodes concrètes basées sur les neurosciences pour
-                            retrouver rapidement votre calme en situation de stress...
-                        </p>
-                        <div class="blog-meta">
-                            <span class="blog-date">15 octobre 2024</span>
-                            <a href="#" class="blog-link">Lire la suite →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog-2-placeholder.jpg" alt="Article blog">
-                        <span class="blog-category">Relations</span>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Les patterns toxiques dans les relations</h3>
-                        <p>
-                            Comment identifier et briser les schémas relationnels qui vous font
-                            souffrir ? Une approche systémique pour des relations saines...
-                        </p>
-                        <div class="blog-meta">
-                            <span class="blog-date">8 octobre 2024</span>
-                            <a href="#" class="blog-link">Lire la suite →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog-3-placeholder.jpg" alt="Article blog">
-                        <span class="blog-category">TOC</span>
-                    </div>
-                    <div class="blog-content">
-                        <h3>Comprendre les TOC : au-delà des symptômes</h3>
-                        <p>
-                            Une vision systémique des troubles obsessionnels compulsifs qui
-                            ouvre de nouvelles perspectives thérapeutiques...
-                        </p>
-                        <div class="blog-meta">
-                            <span class="blog-date">1 octobre 2024</span>
-                            <a href="#" class="blog-link">Lire la suite →</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <div class="blog-cta">
-                <a href="/blog" class="btn btn-secondary">Voir tous les articles</a>
-            </div>
+        <div>
+          <h4>Contact direct</h4>
+          <ul>
+            <li><a href="mailto:geoffbertrand@gmail.com">geoffbertrand@gmail.com</a></li>
+            <li><a href="https://calendly.com/geoffbertrand/30min" target="_blank" rel="noopener">Calendrier</a></li>
+            <li><a href="https://lact.fr/" target="_blank" rel="noopener">LACT.fr</a></li>
+            <li><a href="https://ia.lact.fr/" target="_blank" rel="noopener">ia.lact.fr · outil LACT</a></li>
+          </ul>
         </div>
-    </section>
+      </div>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <h2 class="section-title centered">Questions Fréquentes</h2>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> · FLEX ALIGNEMENT · GEOFFROY BERTRAND</span>
+        <span>COACH SYSTÉMIQUE STRATÉGIQUE · ÉCOLE DE PALO ALTO</span>
+      </div>
+    </div>
+  </footer>
 
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Quelle est la différence avec une thérapie classique ?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            L'approche systémique brève se concentre sur le présent et les solutions
-                            plutôt que sur l'exploration du passé. Nous travaillons sur les patterns
-                            actuels qui maintiennent vos difficultés, permettant des changements
-                            rapides et durables en quelques séances.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Combien de séances sont nécessaires ?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            En moyenne, 6 à 12 séances suffisent pour observer des changements
-                            significatifs. Certains problèmes peuvent être résolus en moins de
-                            séances, d'autres peuvent nécessiter un suivi plus long. Chaque
-                            parcours est unique.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Les séances en ligne sont-elles aussi efficaces ?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Absolument. Les recherches montrent que la thérapie en ligne peut être
-                            tout aussi efficace qu'en présentiel. J'utilise une plateforme sécurisée
-                            et l'approche reste la même. Cela offre plus de flexibilité et de confort.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Comment savoir si cette approche me convient ?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            C'est exactement pour cela que je propose une consultation découverte
-                            gratuite. Nous pourrons discuter de vos besoins, de mes méthodes et
-                            voir si nous sommes un bon match thérapeutique. Il n'y a aucun engagement.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Quelle est votre politique d'annulation ?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Les séances peuvent être annulées ou reportées gratuitement jusqu'à
-                            24 heures avant. Au-delà, la séance est due. Cette politique permet
-                            de maintenir une disponibilité équitable pour tous les clients.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Proposez-vous des tarifs adaptés ?</span>
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Je crois que la thérapie doit être accessible. Pour les étudiants,
-                            chômeurs ou personnes en difficulté financière, des tarifs adaptés
-                            peuvent être discutés. N'hésitez pas à m'en parler.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title centered">Prendre Contact</h2>
-            <p class="section-subtitle">
-                Prêt à commencer votre parcours vers le changement ?
-                Plusieurs options s'offrent à vous.
-            </p>
-
-            <div class="contact-options">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <h3>Réserver en ligne</h3>
-                    <p>Le plus rapide : choisissez directement votre créneau</p>
-                    <a href="https://calendly.com/geoffbertrand/30min" class="btn btn-primary" target="_blank">
-                        Voir les disponibilités
-                    </a>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Par téléphone</h3>
-                    <p>Pour un premier contact plus personnel</p>
-                    <a href="tel:+33664917389" class="contact-link">
-                        <i class="fas fa-phone"></i> +33 6 64 91 73 89
-                    </a>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Par email</h3>
-                    <p>Pour poser vos questions en détail</p>
-                    <a href="mailto:contact@flexalignement.com" class="contact-link">
-                        <i class="fas fa-envelope"></i> contact@flexalignement.com
-                    </a>
-                </div>
-            </div>
-
-            <div class="contact-form-section">
-                <h3>Ou envoyez-moi un message</h3>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Nom complet</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Sujet</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Choisir...</option>
-                                <option value="info">Demande d'information</option>
-                                <option value="rdv">Prise de rendez-vous</option>
-                                <option value="couple">Thérapie de couple</option>
-                                <option value="toc">Question sur les TOC</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="message">Votre message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <div class="form-submit">
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Envoyer le message
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="contact-info-bottom">
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Cabinet</h4>
-                        <p>Consultations en ligne<br>et en présentiel sur RDV</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h4>Horaires</h4>
-                        <p>Lundi - Vendredi : 9h - 19h<br>Samedi : 9h - 13h</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-globe"></i>
-                    <div>
-                        <h4>Langues</h4>
-                        <p>Français<br>English</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <!-- Top Footer -->
-            <div class="footer-top">
-                <div class="footer-left">
-                    <h4>Contact</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+33664917389">+33 6 64 91 73 89</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:contact@flexalignement.com">contact@flexalignement.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-calendar"></i>
-                            <a href="https://calendly.com/geoffbertrand/30min" target="_blank">Prendre RDV en ligne</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Central Logo Section -->
-                <div class="footer-center">
-                    <img src="images/Logo_Coach.gif" alt="Flex Alignement" class="footer-logo-gif">
-                    <h3 class="footer-brand-name">Flex Alignement</h3>
-                    <p class="footer-brand-subtitle">Thérapie</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-right">
-                    <h4>Navigation</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#approche">Mon approche</a></li>
-                        <li><a href="#tarifs">Tarifs</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Bottom Footer -->
-            <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2024 Flex Alignement Thérapie - Tous droits réservés</p>
-                <div class="legal-links">
-                    <a href="/mentions-legales">Mentions légales</a>
-                    <span class="separator">|</span>
-                    <a href="/confidentialite">Politique de confidentialité</a>
-                    <span class="separator">|</span>
-                    <a href="/cgv">CGV</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Scripts -->
-    <script src="scripts.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/diagrams.js"></script>
 </body>
 </html>

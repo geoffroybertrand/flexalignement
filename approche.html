@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'approche systémique stratégique, en clair — Flex Alignement</title>
+  <meta name="description" content="Comment fonctionne l'approche systémique stratégique de l'école de Palo Alto. Le système avant l'individu, les tentatives de solution, le changement de type 2, pourquoi ça va vite.">
+  <meta property="og:title" content="L'approche systémique stratégique, en clair">
+  <meta property="og:description" content="Lecture complète de la méthode Palo Alto / LACT. Pédagogique, sans jargon, sans promesse magique.">
+  <meta property="og:url" content="https://flexalignement.fr/approche.html">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    .prose h2 { margin-top: var(--sp-9); margin-bottom: var(--sp-4); font-size: clamp(1.75rem, 3vw, 2.4rem); letter-spacing: -0.02em; }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { font-size: 1.125rem; line-height: 1.7; margin-bottom: var(--sp-4); }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose .chapter-num { display: block; font-family: var(--f-mono); font-size: var(--fs-xs); letter-spacing: 0.12em; color: var(--c-signal); margin-bottom: var(--sp-3); text-transform: uppercase; }
+    .prose .chapter-diagram { margin: var(--sp-6) 0; padding: var(--sp-5); background: var(--c-paper-2); border: 1px solid var(--c-line); border-radius: 2px; }
+    .prose .chapter-diagram svg { width: 100%; max-width: 400px; height: auto; margin: 0 auto; display: block; }
+    .prose blockquote {
+      margin: var(--sp-6) 0;
+      padding-left: var(--sp-5);
+      border-left: 2px solid var(--c-signal);
+      font-size: 1.25rem;
+      letter-spacing: -0.012em;
+      line-height: 1.4;
+      color: var(--c-ink);
+      font-weight: 500;
+    }
+    .prose blockquote cite {
+      display: block;
+      margin-top: var(--sp-3);
+      font-family: var(--f-mono);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.08em;
+      color: var(--c-system);
+      font-weight: 400;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+    .prose strong { font-weight: 600; }
+    .toc {
+      position: sticky;
+      top: calc(64px + var(--sp-4));
+      padding: var(--sp-5) 0;
+      border-top: 1px solid var(--c-line);
+      border-bottom: 1px solid var(--c-line);
+    }
+    .toc h3 {
+      font-family: var(--f-mono);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.12em;
+      color: var(--c-system);
+      text-transform: uppercase;
+      margin-bottom: var(--sp-4);
+      font-weight: 500;
+    }
+    .toc ul { list-style: none; padding: 0; display: grid; gap: var(--sp-3); }
+    .toc a { font-size: var(--fs-sm); color: var(--c-ink); display: flex; gap: var(--sp-3); transition: color var(--dur) var(--ease); }
+    .toc a:hover { color: var(--c-signal); }
+    .toc a .n { font-family: var(--f-mono); color: var(--c-signal); flex: 0 0 28px; font-size: var(--fs-xs); padding-top: 2px; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-brand" aria-label="Flex Alignement — accueil">
+        <span class="nav-brand__logo" aria-hidden="true"><img src="images/Logo_Coach.gif" alt="" /></span>
+        <span class="nav-brand__text">
+          <span class="mark">Flex Alignement</span>
+          <span class="sub">Systémique</span>
+        </span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="particuliers.html">Particuliers</a></li>
+        <li><a href="approche.html">Approche</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn--primary btn--sm">Prendre RDV <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menu">
+        <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <line class="bar bar1" x1="2" y1="4" x2="16" y2="4" stroke="currentColor" stroke-width="1.5"/>
+          <line class="bar bar2" x1="2" y1="9" x2="16" y2="9" stroke="currentColor" stroke-width="1.5"/>
+          <line class="bar bar3" x1="2" y1="14" x2="16" y2="14" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="nav-mobile" data-open="false">
+      <ul role="list">
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="particuliers.html">Particuliers</a></li>
+        <li><a href="approche.html">Approche</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav-cta-mobile">Prendre RDV <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HEADER -->
+    <section class="section" style="padding-bottom: var(--sp-7);">
+      <div class="container-narrow">
+        <span class="kicker">Approche</span>
+        <h1 style="font-size: clamp(2.5rem, 5.5vw, 4.5rem); letter-spacing: -0.028em; line-height: 1.04; margin-bottom: var(--sp-5);">Ces paradoxes du quotidien où nos solutions deviennent le problème.</h1>
+        <p style="font-size: var(--fs-lg); line-height: 1.5; max-width: 56ch; color: var(--c-ink); margin-bottom: var(--sp-5);">
+          Avez-vous déjà remarqué que plus vous essayez de vous endormir, moins vous y arrivez&nbsp;? Plus vous voulez impressionner quelqu'un, plus vous êtes maladroit&nbsp;? C'est exactement ce qu'étudie la systémique — et c'est avec ça qu'on travaille.
+        </p>
+
+        <!-- Paradox examples strip -->
+        <div class="paradox-strip reveal" aria-label="Paradoxes du quotidien">
+          <div class="paradox">
+            <span class="paradox__num">01</span>
+            <span class="paradox__text">Plus vous essayez de vous endormir, moins vous y arrivez.</span>
+          </div>
+          <div class="paradox">
+            <span class="paradox__num">02</span>
+            <span class="paradox__text">Plus vous voulez impressionner, plus vous êtes maladroit.</span>
+          </div>
+          <div class="paradox">
+            <span class="paradox__num">03</span>
+            <span class="paradox__text">Plus vous cherchez à contrôler, plus vous perdez le contrôle.</span>
+          </div>
+        </div>
+
+        <div class="mono-line" style="margin-top: var(--sp-5); padding-top: var(--sp-4); border-top: 1px solid var(--c-line);">
+          <span>LECTURE · ~8 MIN</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>ÉCOLE DE PALO ALTO</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>LIGNÉE LACT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section style="background: var(--c-paper-2); border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); padding-block: var(--sp-5);">
+      <div class="container-narrow">
+        <nav aria-label="Table des matières">
+          <h3 style="font-family: var(--f-mono); font-size: var(--fs-xs); letter-spacing: 0.12em; color: var(--c-system); text-transform: uppercase; margin-bottom: var(--sp-4); font-weight: 500;">Sept chapitres</h3>
+          <ol style="list-style: none; padding: 0; display: grid; gap: var(--sp-2); grid-template-columns: 1fr; counter-reset: toc-counter;">
+            <li><a href="#chap-01" class="link-arrow" style="border: 0; font-weight: 400;"><span style="font-family: var(--f-mono); color: var(--c-signal); margin-right: var(--sp-3);">01</span>Le problème, c'est souvent la solution qu'on a trouvée</a></li>
+            <li><a href="#chap-02" class="link-arrow" style="border: 0; font-weight: 400;"><span style="font-family: var(--f-mono); color: var(--c-signal); margin-right: var(--sp-3);">02</span>Tout est lié — la métaphore du mobile</a></li>
+            <li><a href="#chap-03" class="link-arrow" style="border: 0; font-weight: 400;"><span style="font-family: var(--f-mono); color: var(--c-signal); margin-right: var(--sp-3);">03</span>La danse invisible — une histoire de couple</a></li>
+            <li><a href="#chap-04" class="link-arrow" style="border: 0; font-weight: 400;"><span style="font-family: var(--f-mono); color: var(--c-signal); margin-right: var(--sp-3);">04</span>Changement de type 1 vs type 2 — pourquoi ça va vite</a></li>
+            <li><a href="#chap-05" class="link-arrow" style="border: 0; font-weight: 400;"><span style="font-family: var(--f-mono); color: var(--c-signal); margin-right: var(--sp-3);">05</span>L'héritage Palo Alto et la lignée LACT</a></li>
+            <li><a href="#chap-06" class="link-arrow" style="border: 0; font-weight: 400;"><span style="font-family: var(--f-mono); color: var(--c-signal); margin-right: var(--sp-3);">06</span>Ce que ça implique en entreprise</a></li>
+            <li><a href="#chap-07" class="link-arrow" style="border: 0; font-weight: 400;"><span style="font-family: var(--f-mono); color: var(--c-signal); margin-right: var(--sp-3);">07</span>Ce que ça implique pour un·e particulier·e</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- PROSE -->
+    <article class="section">
+      <div class="container-prose prose">
+
+        <section id="chap-01" class="reveal">
+          <span class="chapter-num">Chapitre 01</span>
+          <h2>Le problème, c'est souvent la solution qu'on a trouvée.</h2>
+          <p>Voici le cœur de la systémique, en une phrase : <strong>ce qui entretient un problème, ce sont très souvent les efforts qu'on fait pour le résoudre</strong>. Pas la cause initiale — les tentatives de solution.</p>
+          <p>Un manager qui veut rassurer une équipe inquiète peut, à force de rassurer, installer l'idée qu'il y a quelque chose à craindre. Un partenaire qui veut comprendre peut, à force de questions, produire l'effet inverse de celui recherché. Un parent qui veut protéger son adolescent peut, à force de protection, empêcher l'autonomie qu'il appelle de ses vœux.</p>
+
+          <div class="metaphor" aria-label="Métaphore du thermostat">
+            <div class="metaphor__icon" aria-hidden="true">°C</div>
+            <div class="metaphor__body">
+              <h3>La métaphore du thermostat.</h3>
+              <p>Imaginez votre thermostat. Il ne chauffe pas la maison — il <em>régule</em>. Quand il fait trop froid, il déclenche. Quand c'est assez chaud, il arrête. Nous fonctionnons pareil dans nos relations : nous nous régulons mutuellement, souvent sans nous en rendre compte.</p>
+              <p>Ce qu'on appelle « problème » est bien souvent un <strong>système de régulation qui s'est emballé</strong> — et plus on appuie sur le bouton pour le calmer, plus il s'emballe. Le travail consiste à trouver le geste précis qui permet au thermostat de reprendre sa respiration.</p>
+            </div>
+          </div>
+
+          <div class="chapter-diagram" aria-hidden="true">
+            <svg data-concept-diagram="loop"></svg>
+          </div>
+          <p>L'intervention consiste souvent à <strong>arrêter de faire ce qui ne marche pas</strong>, même et surtout quand cela paraît être « la bonne chose à faire ». Cette simple bascule — fermer une boucle qui s'auto-alimente — produit des effets souvent spectaculaires.</p>
+          <blockquote>
+            Plus d'une même chose est encore plus d'une même chose. Si cela ne marche pas, faites-en moins.
+            <cite>— Paul Watzlawick</cite>
+          </blockquote>
+        </section>
+
+        <section id="chap-02" class="reveal">
+          <span class="chapter-num">Chapitre 02</span>
+          <h2>Tout est lié — la métaphore du mobile.</h2>
+          <p>Imaginez un mobile — de ces structures suspendues, avec des fils et des pièces qui s'équilibrent. Touchez une seule pièce : tout bouge. Dans une famille, un couple, une équipe, c'est exactement pareil. Aucune personne ne « fait » son comportement toute seule — elle répond à l'ensemble, et l'ensemble répond à elle.</p>
+          <p>Conséquence pratique, et contre-intuitive : on peut <strong>débloquer une situation sans « changer » la personne</strong> qu'on désigne comme le problème. Il suffit qu'une autre pièce du système modifie sa réponse — et tout le mobile se réorganise. C'est pour ça que, dans une thérapie de couple, on travaille parfois avec un·e seul·e des deux. Et que, pour un adolescent qui décroche, on travaille souvent avec les parents.</p>
+
+          <div class="metaphor" aria-label="Métaphore du mobile">
+            <div class="metaphor__icon" aria-hidden="true">⟐</div>
+            <div class="metaphor__body">
+              <h3>Touchez une pièce : tout bouge.</h3>
+              <p>Cette interdépendance est la grande découverte de Bateson et de Palo Alto. Elle libère autant qu'elle responsabilise : personne n'est entièrement « cause » de ce qui va mal — et chacun a un levier d'action sur l'ensemble.</p>
+            </div>
+          </div>
+
+          <div class="chapter-diagram" aria-hidden="true">
+            <svg data-concept-diagram="system-focus"></svg>
+          </div>
+        </section>
+
+        <section id="chap-03" class="reveal">
+          <span class="chapter-num">Chapitre 03</span>
+          <h2>La danse invisible — une histoire de couple.</h2>
+          <p>Un couple vient me voir. Ils se disputent tout le temps. Lui se plaint qu'elle est <em>trop émotive</em>. Elle se plaint qu'il est <em>trop froid</em>.</p>
+          <p>Si l'on écoute bien, on entend la boucle : <strong>plus elle exprime ses émotions, plus il se referme. Plus il se referme, plus elle exprime ses émotions.</strong> Ni lui ni elle ne font quoi que ce soit de « faux » au sens moral — chacun répond honnêtement à ce que l'autre produit. Mais ensemble, ils dansent un tango qui les épuise.</p>
+          <p>La solution ? Ce n'est pas de « mieux communiquer ». C'est de <strong>comprendre cette danse — et changer les pas</strong>. Parfois un tout petit geste suffit : qu'il parle en premier avant d'avoir entendu le reproche ; qu'elle formule une observation plutôt qu'un ressenti. Un seul pas modifié, et la musique change.</p>
+
+          <blockquote>
+            La systémique, c'est apprendre à voir ces danses invisibles — en famille, au travail, en société — pour pouvoir choisir d'autres pas.
+          </blockquote>
+        </section>
+
+        <section id="chap-04" class="reveal">
+          <span class="chapter-num">Chapitre 04</span>
+          <h2>Changement de type 1 vs type 2 — pourquoi ça va vite.</h2>
+          <p>Il y a deux façons de changer. La première, c'est l'ajustement — on fait plus ou moins de la même chose, on règle les curseurs. C'est le <strong>changement de type 1</strong>. Il est utile pour des situations fonctionnelles, mais il ne règle pas les boucles qui se répètent : il les lisse.</p>
+          <p>Le <strong>changement de type 2</strong>, c'est changer de niveau logique. Sortir du jeu plutôt que jouer mieux. Quand une dispute de couple se répète depuis dix ans, chercher à « mieux communiquer » est type 1 — et c'est souvent ce qui épuise. Changer la structure de l'échange, casser le pattern, c'est type 2.</p>
+          <div class="chapter-diagram" aria-hidden="true">
+            <svg data-concept-diagram="type12"></svg>
+          </div>
+          <p>L'approche systémique stratégique vise toujours le type 2. C'est pour ça qu'elle est parfois contre-intuitive : on demande rarement plus du même, on demande autre chose. Et c'est aussi pour ça qu'elle est <strong>brève</strong> : quand on a identifié le bon pas à changer, les effets arrivent vite — en 8 à 12 séances typiquement, rarement plus.</p>
+        </section>
+
+        <section id="chap-05" class="reveal">
+          <span class="chapter-num">Chapitre 05</span>
+          <h2>L'héritage Palo Alto et la lignée LACT.</h2>
+          <p>L'approche est née au <strong>Mental Research Institute (MRI)</strong> de Palo Alto dans les années 1960, autour de figures comme Gregory Bateson, Paul Watzlawick, John Weakland et Don Jackson. Ils ont formalisé ce qu'on appelle aujourd'hui la thérapie brève systémique.</p>
+          <p>En Italie, <strong>Giorgio Nardone</strong> a développé à partir des années 1980 la branche « systémique stratégique », particulièrement efficace sur les troubles invalidants (phobies, TOC, panique) et sur les situations de blocage relationnel. C'est cette branche, articulée au travail en organisation, qui est enseignée en France par <strong>LACT</strong> (Laboratoire de l'Approche Clinique et Thérapeutique Systémique), où j'ai été formé.</p>
+          <p>La filiation n'est pas un argument d'autorité — c'est une garantie de <strong>traçabilité méthodologique</strong>. Chaque technique utilisée en séance peut être rapportée à un corpus documenté et validé.</p>
+        </section>
+
+        <section id="chap-06" class="reveal">
+          <span class="chapter-num">Chapitre 06</span>
+          <h2>Ce que ça implique dans une entreprise.</h2>
+          <p>En entreprise, l'approche change radicalement la posture de l'intervenant. On n'est pas là pour diffuser de bonnes pratiques, pour animer des ateliers, ou pour « faire évoluer la culture ». On est là pour <strong>débloquer un système qui s'est bloqué</strong>.</p>
+          <p>Concrètement, cela signifie : entretiens individuels avec les acteurs-clés, cartographie des interactions et des tentatives de solution, intervention sur les rituels qui entretiennent le blocage (comex, réunions hebdomadaires, canaux de communication), actions calibrées entre les rendez-vous, point d'étape, clôture.</p>
+          <p>Cela exclut certaines choses : les sondages 360°, les plans d'action à tiroirs, les coaching de durée indéterminée, les formations génériques. Ce n'est pas un jugement sur ces dispositifs — ils répondent à d'autres besoins. Ce n'est simplement pas cela qu'on fait ici.</p>
+          <p><a href="entreprises.html" class="link-arrow">Voir les dispositifs d'intervention en entreprise <span class="arrow" aria-hidden="true">→</span></a></p>
+        </section>
+
+        <section id="chap-07" class="reveal">
+          <span class="chapter-num">Chapitre 07</span>
+          <h2>Ce que ça implique pour un·e particulier·e.</h2>
+          <p>Pour une personne seule, un couple ou une famille, l'approche prend une forme plus discrète mais le même esprit. On n'explore pas l'enfance, on ne cherche pas <em>pourquoi</em>. On regarde <strong>comment</strong> la situation actuelle se maintient, et on trouve le bon endroit pour la faire bouger.</p>
+          <p>Beaucoup de personnes arrivent après plusieurs années de thérapie classique en disant « j'ai compris pourquoi, mais ça ne change rien ». L'approche systémique stratégique ne remplace pas ces parcours — elle les complète, quand la question posée est devenue « comment sortir ».</p>
+          <p>Un autre trait spécifique : pour les couples et les parents, le travail se fait souvent <strong>avec une partie seulement du système</strong>, et pas nécessairement avec la personne qui « pose problème ». Contre-intuitif, mais démontré : il suffit qu'une pièce du système modifie sa réponse pour que le système tout entier se réorganise.</p>
+          <p><a href="particuliers.html" class="link-arrow">Voir les formats d'accompagnement pour particuliers <span class="arrow" aria-hidden="true">→</span></a></p>
+        </section>
+
+        <section class="reveal" style="margin-top: var(--sp-9); padding-top: var(--sp-7); border-top: 1px solid var(--c-line);">
+          <span class="chapter-num">Chute</span>
+          <h2 style="font-size: clamp(1.5rem, 2.8vw, 2.125rem); letter-spacing: -0.02em; line-height: 1.25;">La systémique, c'est découvrir que vous êtes à la fois le problème <span class="signal-word">et la solution</span>.</h2>
+          <p style="margin-top: var(--sp-5);">Cette phrase paraît dure. Elle est libératrice. Elle dit deux choses à la fois :</p>
+          <p>D'un côté, <strong>personne d'autre ne vous sauvera</strong> — parce que vous êtes une pièce du système, et qu'un système se régule de l'intérieur. De l'autre, <strong>vous disposez déjà de tous les leviers</strong> — parce que modifier un seul de vos gestes suffit à réorganiser l'ensemble.</p>
+          <p>C'est l'endroit exact où je peux vous être utile : vous aider à <strong>mobiliser ce que vous avez déjà</strong>, là où vous ne le voyiez pas.</p>
+        </section>
+
+      </div>
+    </article>
+
+    <!-- CTA final -->
+    <section class="section section--alt" aria-labelledby="final-cta">
+      <div class="container">
+        <div class="cta-block reveal" style="max-width: 680px;">
+          <span class="section-number">APRÈS LECTURE</span>
+          <h2 id="final-cta" style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: var(--sp-4);">Envie d'en parler concrètement ?</h2>
+          <p style="font-size: var(--fs-lg); line-height: 1.45; margin-bottom: var(--sp-6);">
+            Un premier échange de 20–30 minutes en visio, sans engagement. Pour qualifier votre situation ou votre besoin d'intervention.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--sp-3);">
+            <a href="contact.html#entreprise" class="btn btn--primary">Cadrage entreprise <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="contact.html#particulier" class="btn btn--ghost">Appel particulier <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="statusbar" role="status" aria-live="polite">
+        <span class="status-dot">DISPONIBLE</span>
+        <span>PROCHAINE OUVERTURE <strong data-status-next>—</strong></span>
+        <span>3 MISSIONS ACTIVES</span>
+        <span>RÉPONSE &lt; 48 H</span>
+        <span style="margin-left: auto;">PARIS · VISIO · FR / EN</span>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-block">
+            <span class="brand-inline"><img src="images/Logo_Coach.gif" alt="" /><span class="mark">Flex Alignement</span></span>
+          </div>
+          <p>Coaching systémique stratégique pour les organisations et les personnes qui veulent sortir de boucles installées. École de Palo Alto — formation LACT.</p>
+        </div>
+        <div>
+          <h4>Missions</h4>
+          <ul>
+            <li><a href="entreprises.html">Entreprises</a></li>
+            <li><a href="particuliers.html">Particuliers</a></li>
+            <li><a href="approche.html">L'approche</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="a-propos.html">Qui je suis</a></li>
+            <li><a href="contact.html">Contact &amp; RDV</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact direct</h4>
+          <ul>
+            <li><a href="mailto:geoffbertrand@gmail.com">geoffbertrand@gmail.com</a></li>
+            <li><a href="https://calendly.com/geoffbertrand/30min" target="_blank" rel="noopener">Calendrier</a></li>
+            <li><a href="https://lact.fr/" target="_blank" rel="noopener">LACT.fr</a></li>
+            <li><a href="https://ia.lact.fr/" target="_blank" rel="noopener">ia.lact.fr · outil LACT</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> · FLEX ALIGNEMENT · GEOFFROY BERTRAND</span>
+        <span>COACH SYSTÉMIQUE STRATÉGIQUE · ÉCOLE DE PALO ALTO</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/diagrams.js"></script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; prise de rendez-vous — Flex Alignement</title>
+  <meta name="description" content="Prendre contact pour une mission entreprise ou un accompagnement particulier. Premier échange gratuit, réponse sous 48 heures.">
+  <meta property="og:title" content="Contact — Flex Alignement">
+  <meta property="og:description" content="Premier échange gratuit. Réponse sous 48 heures.">
+  <meta property="og:url" content="https://flexalignement.fr/contact.html">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    .contact-lede h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.028em; line-height: 1.04; margin-bottom: var(--sp-5); }
+    .contact-lede p { font-size: var(--fs-lg); line-height: 1.5; max-width: 56ch; }
+
+    .contact-grid {
+      display: grid;
+      gap: var(--sp-8);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 960px) {
+      .contact-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: var(--sp-9); align-items: start; }
+    }
+
+    .contact-aside {
+      display: grid;
+      gap: var(--sp-4);
+      padding: var(--sp-6);
+      background: var(--c-paper-2);
+      border: 1px solid var(--c-line);
+      border-radius: 2px;
+      position: sticky;
+      top: calc(64px + var(--sp-5));
+    }
+    .contact-aside h3 {
+      font-family: var(--f-mono);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--c-system);
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    .contact-aside p { font-size: var(--fs-sm); line-height: 1.55; }
+    .contact-aside .aside-block { padding-bottom: var(--sp-4); border-bottom: 1px solid var(--c-line); }
+    .contact-aside .aside-block:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .panel { display: grid; gap: var(--sp-5); }
+    .panel .panel-lede {
+      font-size: var(--fs-md);
+      color: var(--c-ink);
+      padding-bottom: var(--sp-5);
+      border-bottom: 1px solid var(--c-line);
+      max-width: 56ch;
+    }
+    .panel .panel-lede strong { color: var(--c-signal); }
+
+    .consent {
+      display: flex;
+      gap: var(--sp-3);
+      align-items: start;
+      padding: var(--sp-4);
+      border: 1px solid var(--c-line);
+      border-radius: 2px;
+    }
+    .consent input { margin-top: 5px; width: 18px; height: 18px; }
+    .consent label {
+      font-family: var(--f-body);
+      font-size: var(--fs-sm);
+      color: var(--c-ink);
+      line-height: 1.5;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .consent a { color: var(--c-signal); border-bottom: 1px solid var(--c-signal); }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-brand" aria-label="Flex Alignement — accueil">
+        <span class="nav-brand__logo" aria-hidden="true"><img src="images/Logo_Coach.gif" alt="" /></span>
+        <span class="nav-brand__text">
+          <span class="mark">Flex Alignement</span>
+          <span class="sub">Systémique</span>
+        </span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="particuliers.html">Particuliers</a></li>
+        <li><a href="approche.html">Approche</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://calendly.com/geoffbertrand/30min" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Voir le calendrier <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menu">
+        <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <line class="bar bar1" x1="2" y1="4" x2="16" y2="4" stroke="currentColor" stroke-width="1.5"/>
+          <line class="bar bar2" x1="2" y1="9" x2="16" y2="9" stroke="currentColor" stroke-width="1.5"/>
+          <line class="bar bar3" x1="2" y1="14" x2="16" y2="14" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="nav-mobile" data-open="false">
+      <ul role="list">
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="particuliers.html">Particuliers</a></li>
+        <li><a href="approche.html">Approche</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="https://calendly.com/geoffbertrand/30min" target="_blank" rel="noopener" class="btn btn--primary nav-cta-mobile">Voir le calendrier <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HEADER -->
+    <section class="section" style="padding-bottom: var(--sp-7);">
+      <div class="container">
+        <div class="contact-lede reveal">
+          <span class="kicker">Contact &amp; rendez-vous</span>
+          <h1>Un premier échange, pour voir si on travaille ensemble.</h1>
+          <p>30 minutes pour les entreprises, 20 pour les particuliers. En visio, gratuit, sans engagement. Je réponds sous 48 heures.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT GRID -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- LEFT: tabs + forms -->
+          <div>
+            <div class="form-tabs" role="tablist" aria-label="Type de demande">
+              <button role="tab" id="tab-entreprise" aria-controls="panel-entreprise" aria-selected="true" tabindex="0">Entreprise</button>
+              <button role="tab" id="tab-particulier" aria-controls="panel-particulier" aria-selected="false" tabindex="-1">Particulier</button>
+            </div>
+
+            <!-- ENTREPRISE PANEL -->
+            <section id="panel-entreprise" role="tabpanel" aria-labelledby="tab-entreprise">
+              <a id="entreprise" style="display: block; transform: translateY(-80px);" aria-hidden="true"></a>
+              <form class="form panel" action="mailto:geoffbertrand@gmail.com" method="post" enctype="text/plain" novalidate>
+                <p class="panel-lede">
+                  <strong>Cadrage de mission entreprise.</strong> Quelques champs pour que j'arrive au premier échange avec les bonnes questions déjà préparées.
+                </p>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="e-nom">Nom &amp; prénom <span class="req" aria-hidden="true">*</span></label>
+                    <input id="e-nom" name="nom" type="text" required autocomplete="name">
+                  </div>
+                  <div class="field">
+                    <label for="e-fonction">Fonction <span class="req" aria-hidden="true">*</span></label>
+                    <input id="e-fonction" name="fonction" type="text" required placeholder="DRH, DG, Fondateur·ice…">
+                  </div>
+                </div>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="e-orga">Organisation <span class="req" aria-hidden="true">*</span></label>
+                    <input id="e-orga" name="organisation" type="text" required autocomplete="organization">
+                  </div>
+                  <div class="field">
+                    <label for="e-taille">Taille de l'organisation</label>
+                    <select id="e-taille" name="taille">
+                      <option value="">—</option>
+                      <option>Moins de 20 personnes</option>
+                      <option>20–100 personnes</option>
+                      <option>100–500 personnes</option>
+                      <option>Plus de 500 personnes</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="e-email">E-mail professionnel <span class="req" aria-hidden="true">*</span></label>
+                    <input id="e-email" name="email" type="email" required autocomplete="email">
+                  </div>
+                  <div class="field">
+                    <label for="e-tel">Téléphone</label>
+                    <input id="e-tel" name="telephone" type="tel" autocomplete="tel">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="e-type">Nature de la demande <span class="req" aria-hidden="true">*</span></label>
+                  <select id="e-type" name="type_demande" required>
+                    <option value="">—</option>
+                    <option>Coaching de dirigeant·e</option>
+                    <option>Coaching d'équipe</option>
+                    <option>Résolution de conflit</option>
+                    <option>Accompagnement du changement / post-fusion</option>
+                    <option>Prise de poste</option>
+                    <option>Autre / je ne sais pas encore</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="e-message">Décrivez la situation en quelques lignes <span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="e-message" name="message" required placeholder="Contexte, depuis quand, ce qui a déjà été tenté…"></textarea>
+                  <span class="hint">Tout est strictement confidentiel.</span>
+                </div>
+
+                <div class="field">
+                  <label for="e-delai">Délai souhaité</label>
+                  <select id="e-delai" name="delai">
+                    <option value="">—</option>
+                    <option>Urgent (&lt; 15 jours)</option>
+                    <option>Sous 1 mois</option>
+                    <option>1 à 3 mois</option>
+                    <option>Pas de délai précis</option>
+                  </select>
+                </div>
+
+                <!-- Honeypot anti-spam -->
+                <input type="text" name="website" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px;" aria-hidden="true">
+
+                <div class="consent">
+                  <input id="e-consent" type="checkbox" required>
+                  <label for="e-consent">Je consens au traitement de mes données pour répondre à ma demande. Les données sont conservées 30 jours, non partagées. Voir la <a href="politique-confidentialite.html">politique de confidentialité</a>.</label>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center;">
+                  <button type="submit" class="btn btn--primary">Envoyer la demande <span class="arrow" aria-hidden="true">→</span></button>
+                  <span class="mono" style="color: var(--c-system);">RÉPONSE &lt; 48 H</span>
+                </div>
+              </form>
+            </section>
+
+            <!-- PARTICULIER PANEL -->
+            <section id="panel-particulier" role="tabpanel" aria-labelledby="tab-particulier" hidden>
+              <a id="particulier" style="display: block; transform: translateY(-80px);" aria-hidden="true"></a>
+              <form class="form panel" action="mailto:geoffbertrand@gmail.com" method="post" enctype="text/plain" novalidate>
+                <p class="panel-lede">
+                  <strong>Appel découverte — 20 minutes, gratuit.</strong> Quelques mots pour que je prépare notre échange. Aucun détail personnel n'est obligatoire.
+                </p>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="p-prenom">Prénom</label>
+                    <input id="p-prenom" name="prenom" type="text" autocomplete="given-name">
+                    <span class="hint">Facultatif. Juste pour savoir comment vous appeler.</span>
+                  </div>
+                  <div class="field">
+                    <label for="p-email">E-mail <span class="req" aria-hidden="true">*</span></label>
+                    <input id="p-email" name="email" type="email" required autocomplete="email">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="p-type">Pour quel type d'accompagnement ?</label>
+                  <select id="p-type" name="type">
+                    <option value="">—</option>
+                    <option>Individuel</option>
+                    <option>Couple</option>
+                    <option>Parents / adolescent</option>
+                    <option>Je ne sais pas encore</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="p-message">Quelques mots sur votre situation <span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="p-message" name="message" required placeholder="Vous pouvez rester vague si vous préférez — on aura le temps d'en parler à l'oral."></textarea>
+                </div>
+
+                <div class="field">
+                  <label for="p-format">Format préféré</label>
+                  <select id="p-format" name="format">
+                    <option value="">—</option>
+                    <option>Visio</option>
+                    <option>Présentiel Paris</option>
+                    <option>Pas de préférence</option>
+                  </select>
+                </div>
+
+                <!-- Honeypot -->
+                <input type="text" name="website" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px;" aria-hidden="true">
+
+                <div class="consent">
+                  <input id="p-consent" type="checkbox" required>
+                  <label for="p-consent">Je consens au traitement de mes données pour répondre à ma demande. Les données sont conservées 30 jours, non partagées. Voir la <a href="politique-confidentialite.html">politique de confidentialité</a>.</label>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center;">
+                  <button type="submit" class="btn btn--primary">Envoyer la demande <span class="arrow" aria-hidden="true">→</span></button>
+                  <span class="mono" style="color: var(--c-system);">RÉPONSE &lt; 48 H</span>
+                </div>
+              </form>
+            </section>
+          </div>
+
+          <!-- RIGHT: aside — direct contact + calendly -->
+          <aside class="contact-aside" aria-labelledby="aside-title">
+            <h3 id="aside-title">Contact direct</h3>
+
+            <div class="aside-block">
+              <span class="mono" style="color: var(--c-signal); margin-bottom: var(--sp-2); display: block;">CALENDRIERS EN LIGNE</span>
+              <p style="margin-bottom: var(--sp-3);">Trois créneaux-types selon votre besoin, sans passer par le formulaire.</p>
+              <div style="display: grid; gap: var(--sp-2);">
+                <a href="https://calendly.com/geoffbertrand/30min" target="_blank" rel="noopener" class="btn btn--signal btn--sm">Cadrage 30 min (entreprise) <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="https://calendly.com/geoffbertrand/seance-decouverte" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Découverte gratuite 20 min <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="https://calendly.com/geoffbertrand/seance-individuelle" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Séance individuelle 60 min <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+
+            <div class="aside-block">
+              <span class="mono" style="color: var(--c-signal); margin-bottom: var(--sp-2); display: block;">E-MAIL</span>
+              <p><a href="mailto:geoffbertrand@gmail.com" class="link-arrow" style="display:inline; font-family: var(--f-mono); font-size: var(--fs-sm);">geoffbertrand@gmail.com</a></p>
+            </div>
+
+            <div class="aside-block">
+              <span class="mono" style="color: var(--c-signal); margin-bottom: var(--sp-2); display: block;">CABINET</span>
+              <p>Paris · <span class="placeholder">[Adresse complète à fournir]</span>.<br>Visio internationale en FR / EN.</p>
+            </div>
+
+            <div class="aside-block">
+              <span class="mono" style="color: var(--c-signal); margin-bottom: var(--sp-2); display: block;">DISPONIBILITÉS</span>
+              <p>Réponse sous 48 heures jours ouvrés. Urgences psychiatriques : contacter le 3114 ou le 15.</p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="statusbar" role="status" aria-live="polite">
+        <span class="status-dot">DISPONIBLE</span>
+        <span>PROCHAINE OUVERTURE <strong data-status-next>—</strong></span>
+        <span>3 MISSIONS ACTIVES</span>
+        <span>RÉPONSE &lt; 48 H</span>
+        <span style="margin-left: auto;">PARIS · VISIO · FR / EN</span>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-block">
+            <span class="brand-inline"><img src="images/Logo_Coach.gif" alt="" /><span class="mark">Flex Alignement</span></span>
+          </div>
+          <p>Coaching systémique stratégique pour les organisations et les personnes qui veulent sortir de boucles installées. École de Palo Alto — formation LACT.</p>
+        </div>
+        <div>
+          <h4>Missions</h4>
+          <ul>
+            <li><a href="entreprises.html">Entreprises</a></li>
+            <li><a href="particuliers.html">Particuliers</a></li>
+            <li><a href="approche.html">L'approche</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="a-propos.html">Qui je suis</a></li>
+            <li><a href="contact.html">Contact &amp; RDV</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact direct</h4>
+          <ul>
+            <li><a href="mailto:geoffbertrand@gmail.com">geoffbertrand@gmail.com</a></li>
+            <li><a href="https://calendly.com/geoffbertrand/30min" target="_blank" rel="noopener">Calendrier</a></li>
+            <li><a href="https://lact.fr/" target="_blank" rel="noopener">LACT.fr</a></li>
+            <li><a href="https://ia.lact.fr/" target="_blank" rel="noopener">ia.lact.fr · outil LACT</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> · FLEX ALIGNEMENT · GEOFFROY BERTRAND</span>
+        <span>COACH SYSTÉMIQUE STRATÉGIQUE · ÉCOLE DE PALO ALTO</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/diagrams.js"></script>
+  <script>
+    // Auto-select tab based on URL hash
+    (() => {
+      const hash = location.hash.replace("#", "");
+      if (hash === "particulier") {
+        const tab = document.getElementById("tab-particulier");
+        if (tab) tab.click();
+      }
+    })();
+  </script>
+</body>
+</html>

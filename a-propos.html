@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geoffroy Bertrand — Coach systémique stratégique · Flex Alignement</title>
+  <meta name="description" content="Parcours, formation LACT, déontologie. Qui intervient, avec quel cadre, selon quelle éthique. Coach systémique stratégique, école de Palo Alto.">
+  <meta property="og:title" content="Geoffroy Bertrand — Coach systémique stratégique">
+  <meta property="og:description" content="Parcours, formation LACT, déontologie.">
+  <meta property="og:url" content="https://flexalignement.fr/a-propos.html">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Geoffroy Bertrand",
+    "jobTitle": "Coach systémique stratégique",
+    "email": "geoffbertrand@gmail.com",
+    "url": "https://flexalignement.fr/a-propos.html",
+    "worksFor": { "@type": "Organization", "name": "Flex Alignement" },
+    "alumniOf": "LACT — École de Palo Alto"
+  }
+  </script>
+
+  <style>
+    .portrait {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      width: 100%;
+      max-width: 560px;
+      overflow: hidden;
+      background: var(--c-paper-2);
+      border: 1px solid var(--c-line);
+    }
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: grayscale(1) contrast(1.12) brightness(0.98);
+      transition: filter var(--dur-slow) var(--ease);
+    }
+    .portrait:hover img { filter: grayscale(1) contrast(1.18) brightness(1); }
+    .portrait__meta {
+      position: absolute;
+      left: 0; bottom: 0;
+      padding: var(--sp-4) var(--sp-4);
+      background: color-mix(in srgb, var(--c-ink) 85%, transparent);
+      backdrop-filter: blur(6px);
+      color: var(--c-paper);
+      font-family: var(--f-mono);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .portrait__meta .dot { display: inline-block; width: 6px; height: 6px; background: var(--c-signal); border-radius: 50%; margin-right: var(--sp-2); transform: translateY(-1px); }
+
+    .bio-intro {
+      display: grid;
+      gap: var(--sp-8);
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+    @media (min-width: 960px) {
+      .bio-intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--sp-9); }
+    }
+    .bio-text h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: -0.028em;
+      line-height: 1.04;
+      margin-bottom: var(--sp-5);
+    }
+    .bio-text p { font-size: var(--fs-lg); line-height: 1.55; margin-bottom: var(--sp-4); max-width: 56ch; }
+
+    .facts {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--c-line);
+    }
+    .fact {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--sp-2);
+      padding: var(--sp-5) 0;
+      border-bottom: 1px solid var(--c-line);
+    }
+    @media (min-width: 700px) { .fact { grid-template-columns: 220px 1fr; gap: var(--sp-5); } }
+    .fact dt {
+      font-family: var(--f-mono);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--c-signal);
+      padding-top: 2px;
+    }
+    .fact dd {
+      font-size: var(--fs-md);
+      line-height: 1.55;
+    }
+
+    .timeline { border-left: 1px solid var(--c-line-hi); padding-left: var(--sp-5); display: grid; gap: var(--sp-6); }
+    .timeline__item { position: relative; }
+    .timeline__item::before {
+      content: "";
+      position: absolute;
+      left: calc(-1 * var(--sp-5) - 5px);
+      top: 8px;
+      width: 9px; height: 9px;
+      background: var(--c-paper);
+      border: 1.5px solid var(--c-signal);
+      border-radius: 50%;
+    }
+    .timeline__year {
+      font-family: var(--f-mono);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.08em;
+      color: var(--c-signal);
+      margin-bottom: var(--sp-1);
+    }
+    .timeline__title { font-size: var(--fs-lg); font-weight: 500; letter-spacing: -0.014em; margin-bottom: var(--sp-1); }
+    .timeline__desc { font-size: var(--fs-sm); color: var(--c-ink); line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-brand" aria-label="Flex Alignement — accueil">
+        <span class="nav-brand__logo" aria-hidden="true"><img src="images/Logo_Coach.gif" alt="" /></span>
+        <span class="nav-brand__text">
+          <span class="mark">Flex Alignement</span>
+          <span class="sub">Systémique</span>
+        </span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="particuliers.html">Particuliers</a></li>
+        <li><a href="approche.html">Approche</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn--primary btn--sm">Prendre RDV <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Menu">
+        <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <line class="bar bar1" x1="2" y1="4" x2="16" y2="4" stroke="currentColor" stroke-width="1.5"/>
+          <line class="bar bar2" x1="2" y1="9" x2="16" y2="9" stroke="currentColor" stroke-width="1.5"/>
+          <line class="bar bar3" x1="2" y1="14" x2="16" y2="14" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="nav-mobile" data-open="false">
+      <ul role="list">
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="particuliers.html">Particuliers</a></li>
+        <li><a href="approche.html">Approche</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav-cta-mobile">Prendre RDV <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO BIO -->
+    <section class="section">
+      <div class="container">
+        <div class="bio-intro reveal">
+          <figure class="portrait">
+            <img src="images/profil_picture.jpeg" alt="Portrait de Geoffroy Bertrand, coach systémique stratégique" loading="eager" />
+            <figcaption class="portrait__meta"><span class="dot" aria-hidden="true"></span>GEOFFROY BERTRAND · PARIS</figcaption>
+          </figure>
+
+          <div class="bio-text">
+            <span class="kicker">À propos</span>
+            <h1>Geoffroy Bertrand, <span class="signal-word">coach systémique stratégique</span>.</h1>
+            <p>Ingénieur formé à l'IA, à la théorie du signal et aux probabilités, devenu coach systémique stratégique après <strong>800 heures de formation LACT</strong> — école de Palo Alto, lignée Watzlawick, Weakland, Nardone. J'interviens auprès d'organisations et de personnes qui ont en général essayé beaucoup de choses avant d'appeler.</p>
+            <p>Ce que je vends, c'est de la <strong>précision</strong>. Identifier exactement ce qui, dans vos interactions, entretient le blocage. Agir avec la plus petite force suffisante — et, dans la majorité des cas, clore la mission en 8 à 12 séances.</p>
+            <p style="color: var(--c-signal); font-weight: 500;">Le premier systémicien qui pense en ingénieur.</p>
+            <div class="mono-line" style="margin-top: var(--sp-6); padding-top: var(--sp-4); border-top: 1px solid var(--c-line);">
+              <span>BASÉ À PARIS</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>FR / EN</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>VISIO INTERNATIONAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CITATION SIGNATURE -->
+    <section class="section" style="padding-block: var(--sp-8);">
+      <div class="container">
+        <figure class="signature-quote reveal">
+          <span class="signature-quote__label">Conviction</span>
+          <blockquote class="signature-quote__body">
+            Je crois profondément que chacun possède les ressources nécessaires pour surmonter ses difficultés. Mon rôle est de vous aider à les mobiliser.
+          </blockquote>
+          <figcaption class="signature-quote__attrib">Geoffroy Bertrand</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 01 — FAITS -->
+    <section class="section section--alt" aria-labelledby="facts-title">
+      <div class="container">
+        <div class="section-head reveal" style="max-width: 680px;">
+          <span class="section-number">01 — FAITS</span>
+          <h2 id="facts-title">Formation, supervision, affiliations.</h2>
+          <p>Des points vérifiables, pas des adjectifs.</p>
+        </div>
+
+        <dl class="facts reveal">
+          <div class="fact">
+            <dt>Formation principale</dt>
+            <dd><strong>LACT</strong> — Laboratoire de l'Approche Clinique et Thérapeutique Systémique. Cycle long d'intervention systémique stratégique : <strong>800 heures sur 2 ans</strong>. <strong>Partenaire affilié LACT</strong>, représentant l'école de Palo Alto en France.</dd>
+          </div>
+          <div class="fact">
+            <dt>Filiation</dt>
+            <dd>École de Palo Alto (MRI) — Watzlawick, Weakland, Don Jackson. Branche italienne : Giorgio Nardone, Centro di Terapia Strategica d'Arezzo.</dd>
+          </div>
+          <div class="fact">
+            <dt>Réseau de pratique</dt>
+            <dd>Membre du réseau <strong>SYPRESS</strong> — réseau de pratique et de recherche en intervention systémique stratégique. Participation aux travaux collectifs et à la supervision entre pairs.</dd>
+          </div>
+          <div class="fact">
+            <dt>Confiance institutionnelle</dt>
+            <dd>Praticien référencé auprès de l'<strong>Assurance Maladie</strong>. Intervient sur le périmètre coaching / thérapie brève dans un cadre déontologique stabilisé.</dd>
+          </div>
+          <div class="fact">
+            <dt>Formation initiale</dt>
+            <dd>Ingénieur — <strong>intelligence artificielle, théorie du signal, probabilités, recherche appliquée</strong>. Ce background est la marque de fabrique : une lecture algorithmique des signaux faibles systémiques.</dd>
+          </div>
+          <div class="fact">
+            <dt>Supervision</dt>
+            <dd>Supervision mensuelle avec pair superviseur, selon les exigences déontologiques de la profession. Supervision ponctuelle sur les missions complexes.</dd>
+          </div>
+          <div class="fact">
+            <dt>Assurance professionnelle</dt>
+            <dd>Responsabilité civile professionnelle couvrant l'activité de coaching et de thérapie brève. Attestation fournie à la signature de convention.</dd>
+          </div>
+          <div class="fact">
+            <dt>Déontologie</dt>
+            <dd>Secret professionnel absolu en séance individuelle. Confidentialité tripartite contractualisée en mission entreprise. Refus de mission si la demande ne relève pas de l'approche.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 02 — BINÔME (entreprises en difficulté) -->
+    <section class="section" aria-labelledby="binome-title">
+      <div class="container">
+        <div class="section-head reveal" style="max-width: 780px;">
+          <span class="section-number">02 — BINÔME · ENTREPRISES EN DIFFICULTÉ</span>
+          <h2 id="binome-title">Pour les missions de restructuration, je n'interviens jamais seul.</h2>
+          <p>Quand une organisation traverse une crise — redressement, restructuration, fusion sous tension — les difficultés sont à la fois humaines et juridiques / financières. Une seule expertise ne suffit pas. Pour ces missions, j'interviens en <strong>binôme</strong> avec Charles Moulette.</p>
+        </div>
+
+        <div class="duo-card reveal">
+          <div class="duo-card__person duo-card__person--primary">
+            <span class="duo-card__mono">GB</span>
+            <div>
+              <span class="duo-card__role">Lecture systémique · intervention sur les dynamiques humaines</span>
+              <h3 class="duo-card__name">Geoffroy Bertrand</h3>
+            </div>
+            <p class="duo-card__desc">Coach systémique stratégique. Background ingénieur (IA, théorie du signal). Lit les signaux faibles de l'organisation, cartographie les boucles qui entretiennent le blocage, conçoit les actions de déblocage.</p>
+            <div class="duo-card__tags">
+              <span>LACT · 800 H</span>
+              <span>SYPRESS</span>
+              <span>ASSURANCE MALADIE</span>
+            </div>
+          </div>
+          <div class="duo-card__person">
+            <span class="duo-card__mono">CM</span>
+            <div>
+              <span class="duo-card__role">Expertise juridique · financière · fusion-acquisition</span>
+              <h3 class="duo-card__name">Charles Moulette</h3>
+            </div>
+            <p class="duo-card__desc">Avocat spécialisé fusion-acquisition, expert-comptable, expert en redressement d'entreprises en difficulté. 55 ans. Sécurise le cadre juridique et financier pendant que l'intervention systémique débloque la dimension humaine.</p>
+            <div class="duo-card__tags">
+              <span>AVOCAT M&amp;A</span>
+              <span>EXPERT-COMPTABLE</span>
+              <span>REDRESSEMENT</span>
+            </div>
+          </div>
+          <div class="duo-card__promise">
+            <span class="duo-card__promise-text">Deux experts, un seul objectif : débloquer ce qui résiste.</span>
+          </div>
+        </div>
+
+        <p style="margin-top: var(--sp-5); color: var(--c-system); font-family: var(--f-mono); font-size: var(--fs-xs); letter-spacing: 0.06em; text-transform: uppercase;">
+          POUR LES MISSIONS CLASSIQUES (COACHING DE DIRIGEANT·E, ÉQUIPE, PRISE DE POSTE), J'INTERVIENS SEUL.
+        </p>
+      </div>
+    </section>
+
+    <!-- 03 — PROJETS & COLLABORATIONS -->
+    <section class="section section--alt" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="split reveal">
+          <aside class="split-aside">
+            <span class="mono">03 — PROJETS &amp; COLLABORATIONS</span>
+          </aside>
+          <div>
+            <h2 id="projects-title" style="margin-bottom: var(--sp-5);">Là où le coach rencontre l'ingénieur.</h2>
+            <p style="font-size: var(--fs-md); color: var(--c-ink); max-width: 56ch; margin-bottom: var(--sp-6);">
+              Mon background ingénieur ne reste pas à la porte du cabinet. Il alimente des projets qui rendent la systémique plus accessible et plus outillée.
+            </p>
+
+            <article style="padding: var(--sp-5) var(--sp-6); border: 1px solid var(--c-line); border-radius: 2px; background: var(--c-paper);">
+              <span class="mono" style="color: var(--c-signal); display: block; margin-bottom: var(--sp-3);">OUTIL · COLLABORATION LACT</span>
+              <h3 style="font-size: var(--fs-xl); letter-spacing: -0.015em; margin-bottom: var(--sp-3);">
+                <a href="https://ia.lact.fr/" target="_blank" rel="noopener" style="color: var(--c-ink); border-bottom: 1px solid var(--c-signal); padding-bottom: 2px; transition: color var(--dur) var(--ease);">ia.lact.fr — outil d'aide à l'intervention systémique</a>
+              </h3>
+              <p style="font-size: var(--fs-md); line-height: 1.55; margin-bottom: var(--sp-4);">
+                Application développée en collaboration avec LACT pour outiller la pratique clinique et la formation à l'approche systémique stratégique. Recherche appliquée sur l'aide à la formulation d'hypothèses et à la cartographie des tentatives de solution.
+              </p>
+              <a href="https://ia.lact.fr/" target="_blank" rel="noopener" class="link-arrow">Ouvrir ia.lact.fr <span class="arrow" aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 — PARCOURS -->
+    <section class="section" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="split reveal">
+          <aside class="split-aside">
+            <span class="mono">04 — PARCOURS</span>
+          </aside>
+          <div>
+            <h2 id="timeline-title" style="margin-bottom: var(--sp-6);">De l'ingénieur au coach — un fil cohérent.</h2>
+            <p style="font-size: var(--fs-md); color: var(--c-ink); max-width: 56ch; margin-bottom: var(--sp-6);">
+              Avant d'être coach, j'étais ingénieur — spécialisé en intelligence artificielle, théorie du signal et fusion d'information. Ce n'est pas une rupture : c'est la même manière de penser, appliquée à un objet différent. Là où l'ingénieur lit les signaux faibles d'un système technique, le coach systémique décode ceux d'un système humain.
+            </p>
+
+            <div class="timeline">
+              <div class="timeline__item">
+                <div class="timeline__year">AUJOURD'HUI</div>
+                <h3 class="timeline__title">Coach systémique stratégique — Flex Alignement</h3>
+                <p class="timeline__desc">Interventions en cabinet et en organisation. Missions B2B (solo ou en binôme avec Charles Moulette pour les entreprises en difficulté) et accompagnement individuel.</p>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__year">2 ANS · 800 H</div>
+                <h3 class="timeline__title">Formation LACT — École de Palo Alto</h3>
+                <p class="timeline__desc">Cycle long d'intervention systémique stratégique, supervision clinique, certification. Partenaire affilié LACT à l'issue du cursus.</p>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__year">AVANT</div>
+                <h3 class="timeline__title">Ingénieur — IA, signal, recherche appliquée</h3>
+                <p class="timeline__desc">Formation ingénieur. Travaux sur l'intelligence artificielle, la théorie du signal, les probabilités et la fusion d'information. Ce regard analytique sur les systèmes complexes reste le cœur de ma pratique.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — POURQUOI CETTE APPROCHE -->
+    <section class="section section--alt" aria-labelledby="why-title">
+      <div class="container">
+        <div class="split reveal">
+          <aside class="split-aside">
+            <span class="mono">05 — CETTE APPROCHE</span>
+          </aside>
+          <div>
+            <h2 id="why-title" style="margin-bottom: var(--sp-5);">Pourquoi cette approche plutôt qu'une autre.</h2>
+            <p style="font-size: var(--fs-md); line-height: 1.6; max-width: 56ch; margin-bottom: var(--sp-4);">
+              J'ai choisi l'approche systémique stratégique pour trois raisons concrètes.
+            </p>
+            <p style="font-size: var(--fs-md); line-height: 1.6; max-width: 56ch; margin-bottom: var(--sp-4);">
+              <strong>La première, c'est l'efficacité mesurable.</strong> On sait au bout de 3 séances si l'hypothèse est la bonne ; au bout de 8, si le travail porte ses fruits. C'est honnête envers les personnes qui paient, c'est honnête envers soi-même.
+            </p>
+            <p style="font-size: var(--fs-md); line-height: 1.6; max-width: 56ch; margin-bottom: var(--sp-4);">
+              <strong>La deuxième, c'est le respect du système.</strong> On ne cherche pas à <em>changer</em> qui que ce soit. On redonne au système sa capacité à fonctionner autrement. Les personnes en ressortent avec plus de pouvoir d'agir, pas plus de diagnostic sur elles-mêmes.
+            </p>
+            <p style="font-size: var(--fs-md); line-height: 1.6; max-width: 56ch;">
+              <strong>La troisième, c'est le refus des prescriptions molles.</strong> Pas de « il faudrait que ». Des actions précises, calibrées, testées en conditions réelles. C'est ce qui fait la différence entre comprendre et changer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" aria-labelledby="final-cta">
+      <div class="container">
+        <div class="cta-block reveal" style="max-width: 680px;">
+          <h2 id="final-cta" style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: var(--sp-4);">Un premier échange ?</h2>
+          <p style="font-size: var(--fs-lg); line-height: 1.45; margin-bottom: var(--sp-6);">
+            30 minutes en visio, sans engagement. On fait le point, je vous dis ce que je peux faire — et si je pense qu'un·e collègue serait plus adapté·e, je vous oriente.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--sp-3);">
+            <a href="contact.html" class="btn btn--primary">Contact &amp; RDV <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="approche.html" class="btn btn--ghost">Comprendre l'approche</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="statusbar" role="status" aria-live="polite">
+        <span class="status-dot">DISPONIBLE</span>
+        <span>PROCHAINE OUVERTURE <strong data-status-next>—</strong></span>
+        <span>3 MISSIONS ACTIVES</span>
+        <span>RÉPONSE &lt; 48 H</span>
+        <span style="margin-left: auto;">PARIS · VISIO · FR / EN</span>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-block">
+            <span class="brand-inline"><img src="images/Logo_Coach.gif" alt="" /><span class="mark">Flex Alignement</span></span>
+          </div>
+          <p>Coaching systémique stratégique pour les organisations et les personnes qui veulent sortir de boucles installées. École de Palo Alto — formation LACT.</p>
+        </div>
+        <div>
+          <h4>Missions</h4>
+          <ul>
+            <li><a href="entreprises.html">Entreprises</a></li>
+            <li><a href="particuliers.html">Particuliers</a></li>
+            <li><a href="approche.html">L'approche</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="a-propos.html">Qui je suis</a></li>
+            <li><a href="contact.html">Contact &amp; RDV</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html">Confidentialité</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact direct</h4>
+          <ul>
+            <li><a href="mailto:geoffbertrand@gmail.com">geoffbertrand@gmail.com</a></li>
+            <li><a href="https://calendly.com/geoffbertrand/30min" target="_blank" rel="noopener">Calendrier</a></li>
+            <li><a href="https://lact.fr/" target="_blank" rel="noopener">LACT.fr</a></li>
+            <li><a href="https://ia.lact.fr/" target="_blank" rel="noopener">ia.lact.fr · outil LACT</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> · FLEX ALIGNEMENT · GEOFFROY BERTRAND</span>
+        <span>COACH SYSTÉMIQUE STRATÉGIQUE · ÉCOLE DE PALO ALTO</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/diagrams.js"></script>
+</body>
+</html>
