@@ -3,4 +3,4 @@ Allow: /
 Disallow: /mentions-legales.html
 Disallow: /politique-confidentialite.html
 
-Sitemap: https://flexalignement.fr/sitemap.xml
+Sitemap: https://flexalignement.com/sitemap.xml

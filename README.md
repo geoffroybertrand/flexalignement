@@ -108,7 +108,7 @@ Dans `assets/js/main.js`, remplace `const canUseCursor = ...` par `const canUseC
 
 1. Créer un compte sur [vercel.com](https://vercel.com) (gratuit).
 2. Depuis la CLI : `npx vercel` dans ce dossier, puis suivre les instructions. Ou glisser-déposer le dossier sur le dashboard.
-3. Configurer le domaine `flexalignement.fr` dans Vercel → Settings → Domains.
+3. Configurer le domaine `flexalignement.com` dans Vercel → Settings → Domains.
 
 ### Option 2 — Netlify
 
@@ -134,7 +134,7 @@ Ajouter **Plausible** ou **Umami** (pas Google Analytics — RGPD-friendly, sans
 **Plausible** (payant, simple) : inscription sur plausible.io, ajouter ce tag dans chaque `<head>` avant la fermeture :
 
 ```html
-<script defer data-domain="flexalignement.fr" src="https://plausible.io/js/script.js"></script>
+<script defer data-domain="flexalignement.com" src="https://plausible.io/js/script.js"></script>
 ```
 
 **Umami** (gratuit si auto-hébergé) : voir umami.is.

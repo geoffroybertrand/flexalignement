@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://flexalignement.fr/</loc>
+    <loc>https://flexalignement.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://flexalignement.fr/entreprises.html</loc>
+    <loc>https://flexalignement.com/entreprises.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://flexalignement.fr/particuliers.html</loc>
+    <loc>https://flexalignement.com/particuliers.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flexalignement.fr/approche.html</loc>
+    <loc>https://flexalignement.com/approche.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flexalignement.fr/a-propos.html</loc>
+    <loc>https://flexalignement.com/a-propos.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flexalignement.fr/contact.html</loc>
+    <loc>https://flexalignement.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
